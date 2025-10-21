@@ -1,3 +1,4 @@
+import Background from './components/Background';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Education from './components/Education';
@@ -10,16 +11,17 @@ import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-slate-100">
-      <Header />
-      <Hero />
-      <Education />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Awards />
-      <Contact />
-      <Footer />
-    </div>
+      <div className="relative">
+        <Background />
+        <Header />
+        <Hero />
+        <Education />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Awards />
+        <Contact />
+        <Footer />
+      </div>
   );
 }

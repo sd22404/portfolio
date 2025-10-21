@@ -8,8 +8,8 @@ interface TagProps {
 
 export default function Tag({ children, variant = 'default', className = '' }: TagProps) {
   const variantClasses = {
-    default: "px-3 py-1 bg-slate-700/50 rounded font-mono text-sm",
-    highlight: "px-2 py-1 bg-cyan-500/20 text-cyan-400 rounded text-xs font-mono"
+    default: "px-3 py-1 bg-background-lighter rounded font-mono text-sm",
+    highlight: "px-2 py-1 bg-accent/20 text-accent rounded text-xs font-mono"
   };
 
   return (

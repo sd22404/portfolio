@@ -9,33 +9,33 @@ export default function Awards() {
     <Section id="awards">
       <SectionHeading number="05">Awards & Recognition</SectionHeading>
       <div className="space-y-4">
-        <Card variant="highlight" className="flex justify-between items-center">
+        <Card variant="highlight" className="flex justify-between items-center w-full">
           <div>
             <Subtitle variant="small">Best Innovation Award</Subtitle>
             <Text variant="small">Tech Hackathon 2024</Text>
           </div>
-          <span className="text-3xl">🏆</span>
+          <span className="text-3xl z-10">🏆</span>
         </Card>
-        <Card variant="highlight" className="flex justify-between items-center">
+        <Card variant="highlight" className="flex justify-between items-center w-full">
           <div>
             <Subtitle variant="small">AWS Certified Solutions Architect</Subtitle>
             <Text variant="small">Professional Level</Text>
           </div>
-          <span className="text-3xl">📜</span>
+          <span className="text-3xl z-10">📜</span>
         </Card>
-        <Card variant="highlight" className="flex justify-between items-center">
+        <Card variant="highlight" className="flex justify-between items-center w-full">
           <div>
             <Subtitle variant="small">Open Source Contributor</Subtitle>
             <Text variant="small">500+ contributions across major projects</Text>
           </div>
-          <span className="text-3xl">⭐</span>
+          <span className="text-3xl z-10">⭐</span>
         </Card>
-        <Card variant="highlight" className="flex justify-between items-center">
+        <Card variant="highlight" className="flex justify-between items-center w-full">
           <div>
             <Subtitle variant="small">Dean's List</Subtitle>
             <Text variant="small">Academic Excellence 2023-2024</Text>
           </div>
-          <span className="text-3xl">🎓</span>
+          <span className="text-3xl z-10">🎓</span>
         </Card>
       </div>
     </Section>

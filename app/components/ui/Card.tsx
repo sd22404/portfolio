@@ -7,15 +7,23 @@ interface CardProps {
 }
 
 export default function Card({ children, variant = 'default', className = '' }: CardProps) {
-  const variantClasses = {
-    default: "bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-lg p-6 hover:border-cyan-500/50 transition-colors",
-    highlight: "bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-lg p-5",
-    project: "bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-lg p-6 hover:border-cyan-500/50 transition-all hover:transform hover:scale-105"
+  const wrapperClasses = {
+    default: "group rounded-[8px] p-[1px] transition-all bg-border/50 hover:bg-gradient-to-r hover:from-accent hover:to-accent-secondary",
+    highlight: "group rounded-[8px] p-[1px] bg-accent/30 hover:bg-gradient-to-r hover:from-accent hover:to-accent-secondary",
+    project: "group rounded-[8px] p-[1px] transition-all bg-border/50 hover:bg-gradient-to-r hover:from-accent hover:to-accent-secondary hover:scale-105"
+  };
+
+  const innerClasses = {
+    default: "drop-shadow-xl bg-gradient-to-br from-background to-background-lighter rounded-[7px] p-6 transition-colors h-full",
+    highlight: "relative drop-shadow-xl bg-background rounded-[7px] p-5 h-full before:content-[''] before:absolute before:inset-0 before:rounded-[inherit] before:bg-gradient-to-r before:from-accent/20 before:to-accent-secondary/20 before:pointer-events-none",
+    project: "drop-shadow-2xl bg-gradient-to-br from-background to-background-lighter rounded-[7px] p-6 h-full"
   };
 
   return (
-    <div className={`${variantClasses[variant]} ${className}`}>
-      {children}
+    <div className={`${wrapperClasses[variant]} ${className}`}>
+      <div className={`${innerClasses[variant]} ${className}`}>
+        {children}
+      </div>
     </div>
   );
 }

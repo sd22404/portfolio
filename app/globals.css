@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
+  --color-background-lighter: var(--background-lighter);
+  --color-background-selection: var(--background-selection);
   --color-foreground: var(--foreground);
+  --color-primary: var(--background);
+  --color-secondary: var(--background-lighter);
+  --color-accent: var(--accent);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-accent-tertiary: var(--accent-tertiary);
+  --color-yellow: var(--color-yellow);
+  --color-green: var(--color-green);
+  --color-blue: var(--color-blue);
+  --color-pink: var(--color-pink);
+  --color-purple: var(--color-purple);
+  --color-orange: var(--color-orange);
+  --color-foreground-lighter: var(--foreground-lighter);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  background: color-mix(in oklab, var(--background-lighter) 50%, var(--background) 50%);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
-body {
-  background: var(--background);
+::selection {
+  background: var(--background-selection);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  /* Catppuccin Mocha */
+  --background: #1e1e2e;            /* base */
+  --background-lighter: #313244;    /* surface0 for cards */
+  --background-selection: #45475a;  /* surface1 for selection */
+  --foreground: #cdd6f4;            /* text */
+
+  --accent: #89b4fa;                /* blue as primary accent */
+  /* --accent-secondary: #f38ba8;     /* red as secondary accent */
+  --accent-secondary: var(--color-purple);
+  --accent-tertiary: var(--color-green);
+  --foreground-lighter: #bac2de;    /* subtext1 */
+  --muted: #9399b2;                 /* overlay2 */
+  --border: #45475a;                /* surface1 */
+
+  --color-yellow: #f9e2af;          /* yellow */
+  --color-green: #a6e3a1;           /* green */
+  --color-blue: #89b4fa;            /* blue */
+  --color-pink: #f5c2e7;            /* pink */
+  --color-purple: #cba6f7;          /* mauve (purple) */
+  --color-orange: #fab387;          /* peach (orange) */
+
+  /* Fonts */
+  --font-jetbrains-mono: "JetBrains Mono", "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }

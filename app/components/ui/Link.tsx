@@ -9,9 +9,9 @@ interface LinkProps {
 
 export default function Link({ href, children, variant = 'text', className = '' }: LinkProps) {
   const variantClasses = {
-    nav: "hover:text-cyan-400 transition-colors font-mono text-sm",
-    text: "hover:text-cyan-400 transition-colors font-mono text-sm",
-    project: "font-mono text-sm text-cyan-400 hover:underline"
+    nav: "hover:text-accent transition-colors font-mono text-sm",
+    text: "hover:text-accent transition-colors font-mono text-sm",
+    project: "font-mono text-sm text-accent-tertiary hover:underline"
   };
 
   return (

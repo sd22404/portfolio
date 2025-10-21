@@ -11,8 +11,8 @@ export default function Button({ href, variant = 'primary', children, className 
   const baseClasses = "px-6 py-3 rounded font-mono text-sm font-semibold transition-all";
   
   const variantClasses = {
-    primary: "bg-gradient-to-r from-cyan-500 to-blue-500 hover:shadow-lg hover:shadow-cyan-500/50",
-    secondary: "border border-slate-600 hover:border-cyan-400 hover:text-cyan-400 transition-colors"
+    primary: "drop-shadow-lg text-background bg-gradient-to-r from-accent to-accent-secondary hover:drop-shadow-accent/50",
+    secondary: "drop-shadow-lg border border-border hover:border-accent hover:text-accent transition-colors"
   };
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;

@@ -8,12 +8,12 @@ interface TextProps {
 
 export default function Text({ children, variant = 'body', className = '' }: TextProps) {
   const variantClasses = {
-    body: "text-slate-300 font-mono text-sm",
-    small: "font-mono text-sm text-slate-400",
+    body: "text-foreground font-mono text-sm",
+    small: "font-mono text-sm text-foreground-lighter",
     mono: "font-mono",
-    muted: "text-slate-400 font-mono text-sm",
-    highlight: "font-mono text-cyan-400",
-    medium: "font-mono text-slate-300"
+    muted: "text-muted font-mono text-sm",
+    highlight: "font-mono text-accent",
+    medium: "font-mono text-foreground"
   };
 
   return (
