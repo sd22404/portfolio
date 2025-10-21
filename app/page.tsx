@@ -8,12 +8,18 @@ import Skills from './components/Skills';
 import Awards from './components/Awards';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Link from './components/ui/Link';
 
 export default function Home() {
   return (
-      <div className="relative">
+      <div className="relative min-h-screen">
         <Background />
-        <Header />
+        <Header links={[
+          { href: "#", label: "about", variant: "nav" },
+          { href: "#experience", label: "experience", variant: "nav" },
+          { href: "#projects", label: "projects", variant: "nav" },
+          { href: "#contact", label: "contact", variant: "nav" }
+        ]} />
         <Hero />
         <Education />
         <Experience />
