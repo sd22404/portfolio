@@ -11,17 +11,15 @@ export default function Contact() {
       <SectionHeading number="06">Get In Touch</SectionHeading>
       <Card className="text-center max-w-2xl mx-auto">
         <Text variant="medium" className="mb-6">
-          I'm always open to discussing new opportunities, interesting projects, or potential collaborations.
-          Feel free to reach out!
+          Contact me...
         </Text>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button href="mailto:hello@example.com" variant="primary">
+          <Button href="mailto:finlay.j.cooper137@gmail.com" variant="primary">
             Send Email
           </Button>
           <div className="flex gap-4">
-            <Link href="https://github.com" variant="text">GitHub</Link>
-            <Link href="https://linkedin.com" variant="text">LinkedIn</Link>
-            <Link href="https://twitter.com" variant="text">Twitter</Link>
+            <Link href="https://github.com/sd22404" variant="text">GitHub</Link>
+            <Link href="https://linkedin.com/in/finlay-cooper" variant="text">LinkedIn</Link>
           </div>
         </div>
       </Card>

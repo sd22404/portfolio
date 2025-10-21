@@ -7,14 +7,13 @@ export default function Hero() {
       <div className="space-y-6">
         <div className="font-mono text-accent text-sm">$ whoami</div>
         <h2 className="text-5xl md:text-7xl font-bold font-mono drop-shadow-xl">
-          Software<br />
+          Finn<br />
           <span className="bg-gradient-to-r from-blue via-purple to-orange bg-clip-text text-transparent">
-            Engineer
+            Cooper
           </span>
         </h2>
         <p className="text-foreground-lighter text-lg max-w-2xl font-mono">
-          Versatile developer crafting elegant solutions across the full stack.
-          Passionate about clean code, scalable architecture, and innovative problem-solving.
+          About me...
         </p>
         <div className="flex gap-4 pt-4">
           <Button href="#contact" variant="primary">

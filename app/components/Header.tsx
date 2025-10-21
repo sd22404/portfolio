@@ -9,7 +9,7 @@ export default function Header() {
             &lt;portfolio /&gt;
           </h1>
           <div className="flex gap-6">
-            <Link href="#about" variant="nav">about</Link>
+            <Link href="#" variant="nav">about</Link>
             <Link href="#experience" variant="nav">experience</Link>
             <Link href="#projects" variant="nav">projects</Link>
             <Link href="#contact" variant="nav">contact</Link>

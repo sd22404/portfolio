@@ -13,56 +13,53 @@ export default function Projects() {
       <SectionHeading number="03">Featured Projects</SectionHeading>
       <div className="grid md:grid-cols-2 gap-6">
         <Card variant="project">
-          <Subtitle variant="large" className="mb-2">Distributed Task Scheduler</Subtitle>
+          <Subtitle variant="large" className="mb-2">Shifting Sands</Subtitle>
           <Text variant="muted" className="mb-4">
-            High-performance task scheduling system with real-time monitoring and auto-scaling capabilities.
+            Mixed media computer game in Unity.
           </Text>
           <TagContainer className="mb-4">
-            <Tag variant="highlight">Go</Tag>
-            <Tag variant="highlight">Redis</Tag>
-            <Tag variant="highlight">Docker</Tag>
-            <Tag variant="highlight">Kubernetes</Tag>
+            <Tag variant="highlight">C#</Tag>
+            <Tag variant="highlight">Unity</Tag>
+            <Tag variant="highlight">OpenCV</Tag>
+            <Tag variant="highlight">Azure Kinect SDK</Tag>
           </TagContainer>
           <Link href="#" variant="project">View project →</Link>
         </Card>
 
         <Card variant="project">
-          <Subtitle variant="large" className="mb-2">AI Code Review Assistant</Subtitle>
+          <Subtitle variant="large" className="mb-2">C++ Rasteriser & Ray-tracer</Subtitle>
           <Text variant="muted" className="mb-4">
-            ML-powered tool that analyzes pull requests and provides intelligent code suggestions.
+            Interactive C++ software rasteriser and ray-tracer from scratch.
           </Text>
           <TagContainer className="mb-4">
-            <Tag variant="highlight">Python</Tag>
-            <Tag variant="highlight">TensorFlow</Tag>
-            <Tag variant="highlight">FastAPI</Tag>
-            <Tag variant="highlight">PostgreSQL</Tag>
+            <Tag variant="highlight">C++</Tag>
+            <Tag variant="highlight">SDL2</Tag>
+            <Tag variant="highlight">OpenMP</Tag>
           </TagContainer>
           <Link href="#" variant="project">View project →</Link>
         </Card>
 
         <Card variant="project">
-          <Subtitle variant="large" className="mb-2">Real-time Collaboration Platform</Subtitle>
+          <Subtitle variant="large" className="mb-2">Livestock Management App</Subtitle>
           <Text variant="muted" className="mb-4">
-            WebSocket-based collaborative editing platform with conflict resolution and presence awareness.
+            Livestock management web app for a local city farm.
           </Text>
           <TagContainer className="mb-4">
-            <Tag variant="highlight">TypeScript</Tag>
             <Tag variant="highlight">React</Tag>
-            <Tag variant="highlight">WebSockets</Tag>
+            <Tag variant="highlight">TypeScript</Tag>
+            <Tag variant="highlight">Spring Boot</Tag>
             <Tag variant="highlight">MongoDB</Tag>
           </TagContainer>
           <Link href="#" variant="project">View project →</Link>
         </Card>
 
         <Card variant="project">
-          <Subtitle variant="large" className="mb-2">Cloud Infrastructure Monitor</Subtitle>
+          <Subtitle variant="large" className="mb-2">Distributed Game of Life</Subtitle>
           <Text variant="muted" className="mb-4">
-            Comprehensive monitoring solution for multi-cloud environments with predictive analytics.
+            A distributed implementation of Conway's Game of Life to AWS workers.
           </Text>
           <TagContainer className="mb-4">
-            <Tag variant="highlight">Rust</Tag>
-            <Tag variant="highlight">Prometheus</Tag>
-            <Tag variant="highlight">Grafana</Tag>
+            <Tag variant="highlight">Go</Tag>
             <Tag variant="highlight">AWS</Tag>
           </TagContainer>
           <Link href="#" variant="project">View project →</Link>

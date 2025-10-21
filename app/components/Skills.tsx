@@ -13,25 +13,25 @@ export default function Skills() {
         <Card>
           <Subtitle variant="medium" className="mb-4">Languages</Subtitle>
           <TagContainer>
-            <Tag>JavaScript/TypeScript</Tag>
+            <Tag>TypeScript</Tag>
             <Tag>Python</Tag>
             <Tag>Go</Tag>
             <Tag>Rust</Tag>
             <Tag>Java</Tag>
             <Tag>C++</Tag>
-            <Tag>SQL</Tag>
+            <Tag>C#</Tag>
           </TagContainer>
         </Card>
 
         <Card>
-          <Subtitle variant="medium" className="mb-4">Frameworks</Subtitle>
+          <Subtitle variant="medium" className="mb-4">Frameworks & Libraries</Subtitle>
           <TagContainer>
-            <Tag>React/Next.js</Tag>
-            <Tag>Node.js</Tag>
-            <Tag>FastAPI</Tag>
-            <Tag>Django</Tag>
+            <Tag>Unity</Tag>
+            <Tag>PyTorch</Tag>
+            <Tag>OpenCV</Tag>
             <Tag>Spring Boot</Tag>
-            <Tag>Express</Tag>
+            <Tag>MongoDB</Tag>
+            <Tag>React</Tag>
           </TagContainer>
         </Card>
 
@@ -39,12 +39,9 @@ export default function Skills() {
           <Subtitle variant="medium" className="mb-4">Tools & Cloud</Subtitle>
           <TagContainer>
             <Tag>Docker</Tag>
-            <Tag>Kubernetes</Tag>
             <Tag>AWS</Tag>
-            <Tag>GCP</Tag>
             <Tag>Git</Tag>
             <Tag>CI/CD</Tag>
-            <Tag>PostgreSQL</Tag>
           </TagContainer>
         </Card>
       </div>

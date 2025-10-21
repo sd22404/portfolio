@@ -11,29 +11,29 @@ export default function Awards() {
       <div className="space-y-4">
         <Card variant="highlight" className="flex justify-between items-center w-full">
           <div>
-            <Subtitle variant="small">Best Innovation Award</Subtitle>
-            <Text variant="small">Tech Hackathon 2024</Text>
+            <Subtitle variant="small">Best Game Runner Up</Subtitle>
+            <Text variant="small">CSS GameJam 2023</Text>
           </div>
           <span className="text-3xl z-10">🏆</span>
         </Card>
         <Card variant="highlight" className="flex justify-between items-center w-full">
           <div>
-            <Subtitle variant="small">AWS Certified Solutions Architect</Subtitle>
-            <Text variant="small">Professional Level</Text>
+            <Subtitle variant="small">People's Choice</Subtitle>
+            <Text variant="small">CSS GameJam 2024</Text>
           </div>
           <span className="text-3xl z-10">📜</span>
         </Card>
         <Card variant="highlight" className="flex justify-between items-center w-full">
           <div>
-            <Subtitle variant="small">Open Source Contributor</Subtitle>
-            <Text variant="small">500+ contributions across major projects</Text>
+            <Subtitle variant="small">Duke of Edinburgh's Silver Award</Subtitle>
+            <Text variant="small">Gold in Progress</Text>
           </div>
           <span className="text-3xl z-10">⭐</span>
         </Card>
         <Card variant="highlight" className="flex justify-between items-center w-full">
           <div>
-            <Subtitle variant="small">Dean's List</Subtitle>
-            <Text variant="small">Academic Excellence 2023-2024</Text>
+            <Subtitle variant="small">Karate 2nd Kyu</Subtitle>
+            <Text variant="small">Brown Belt</Text>
           </div>
           <span className="text-3xl z-10">🎓</span>
         </Card>
