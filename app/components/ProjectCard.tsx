@@ -7,11 +7,17 @@ import Link from './ui/Link';
 import Text from './ui/Text';
 import Image from 'next/image';
 
+export type MediaItem = {
+    type: 'image' | 'video';
+    src: string;
+    alt?: string;
+}
+
 export type Project = {
     slug: string;
     title: string;
     description: string;
-    media?: string[];
+    media?: MediaItem[];
     coverImage?: string;
     tags?: string[];
 };

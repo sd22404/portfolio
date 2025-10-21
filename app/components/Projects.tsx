@@ -1,6 +1,6 @@
 import SectionHeading from './ui/SectionHeading';
 import Section from './ui/Section';
-import ProjectCard, { type Project } from './Project';
+import ProjectCard, { Project } from './ProjectCard';
 
 // Minimal in-file data; consider moving to a data module later
 export const projects: Project[] = [
@@ -9,8 +9,9 @@ export const projects: Project[] = [
     title: "Shifting Sands",
     description: "Mixed media computer game in Unity.",
     media: [
-        "/projects/shifting-sands/hero-background.png",
-        "/projects/shifting-sands/concept-art.png",
+        { type: 'image', src: "/projects/shifting-sands/hero-background.png", alt: "Leaderboard Background" },
+        { type: 'image', src: "/projects/shifting-sands/concept-art.png", alt: "Concept Art" },
+        { type: 'video', src: "/projects/shifting-sands/trailer.mp4" }
     ],
     coverImage: "hero-background.png",
     tags: ["C#", "Unity", "OpenCV", "Azure Kinect SDK"],
