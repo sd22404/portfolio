@@ -2,8 +2,9 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import type { MediaItem } from "./ProjectCard";
+import Card from "./ui/Card";
 
-export default function MediaCarousel({ items = [] as MediaItem[] }: { items?: MediaItem[] }) {
+export default function MediaCarousel({ items = [] as MediaItem[], className = "" }: { items?: MediaItem[], className?: string }) {
   const slides = useMemo(() => items.filter(Boolean), [items]);
   const [index, setIndex] = useState(0);
 
@@ -28,19 +29,20 @@ export default function MediaCarousel({ items = [] as MediaItem[] }: { items?: M
   if (!slides.length) return null;
 
   return (
-    <div
-      className="relative w-full overflow-hidden rounded-md border border-border bg-background/40"
-      role="region"
-      aria-roledescription="carousel"
-      aria-label="Project media carousel"
-    >
+    <Card innerClassName="p-0" outerClassName={`${className}`}>
+      <div
+        className="relative w-full mx-auto max-w-4xl h-full overflow-hidden"
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="Project media carousel"
+      >
       {/* Slides */}
       <div
-        className="flex transition-transform duration-500 ease-out"
+        className="flex h-full items-center transition-transform duration-500 ease-out"
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
         {slides.map((item, i) => (
-          <div key={i} className="shrink-0 grow-0 basis-full">
+          <div key={i} className="shrink-0 grow-0 basis-full h-full flex items-center justify-center">
             <Slide item={item} />
           </div>
         ))}
@@ -76,7 +78,8 @@ export default function MediaCarousel({ items = [] as MediaItem[] }: { items?: M
           />
         ))}
       </div>
-    </div>
+      </div>
+    </Card>
   );
 }
 
@@ -87,7 +90,7 @@ function Slide({ item }: { item: MediaItem }) {
         <img
           src={item.src}
           alt={item.alt ?? ""}
-          className="block w-full h-auto object-cover"
+          className="block h-full w-auto max-w-full object-contain"
         />
       );
     case "video":
@@ -95,7 +98,7 @@ function Slide({ item }: { item: MediaItem }) {
         <video
           src={item.src}
           controls
-          className="block w-full h-auto object-contain bg-black"
+          className="block h-full w-auto max-w-full object-contain bg-black rounded-md"
         />
       );
     default:

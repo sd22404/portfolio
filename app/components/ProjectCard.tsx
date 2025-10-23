@@ -24,7 +24,7 @@ export type Project = {
 
 export default function ProjectCard(project: Project) {
   return (
-    <Card variant="project">
+    <Card variant="raised">
         <Subtitle variant="large" className="mb-2">{project.title}</Subtitle>
         <Text variant="muted" className="mb-4">
             {project.description}

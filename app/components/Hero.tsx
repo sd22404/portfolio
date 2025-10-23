@@ -3,7 +3,7 @@ import Section from './ui/Section';
 
 export default function Hero() {
   return (
-    <Section className="py-20 md:py-32">
+    <Section className="pt-20 md:pt-32">
       <div className="space-y-6">
         <div className="font-mono text-accent text-sm">$ whoami</div>
         <h2 className="text-5xl md:text-7xl font-bold font-mono drop-shadow-xl">

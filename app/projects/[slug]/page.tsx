@@ -11,6 +11,7 @@ import Background from "@/app/components/Background";
 import { projects } from "@/app/components/Projects";
 import Header from "@/app/components/Header";
 import MediaCarousel from "@/app/components/MediaCarousel";
+import Footer from "@/app/components/Footer";
 
 export function generateStaticParams() {
     return projects.map((p) => ({ slug: p.slug }));
@@ -32,10 +33,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     if (!project) return notFound();
 
     return (
-        <div className="relative min-h-screen">
+        <div className="relative min-h-screen flex flex-col">
             <Header links={[{ href: "/", label: "home", variant: "nav" }]} />
             <Background />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 py-16 sm:py-24">
+            <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
                 <Section id="text">
                     <SectionHeading number="P">{project.title}</SectionHeading>
 
@@ -48,16 +49,15 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                             ))}
                         </TagContainer>
                     }
-                    <Link href="/" variant="project" className="mt-8">← Back to home</Link>
+                    <Link href="/#projects" variant="project" className="mt-8">← Back to home</Link>
                 </Section>
-                <Section id="media">
+                <Section id="media" className="pb-8">
                     {project.media?.length ? (
-                        <div className="mb-8">
-                            <MediaCarousel items={project.media as any} />
-                        </div>
+                        <MediaCarousel items={project.media} className="mb-8 h-full" />
                     ) : null}
                 </Section>
             </div>
+            <Footer />
         </div>
     );
 }
