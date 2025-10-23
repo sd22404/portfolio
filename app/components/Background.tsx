@@ -3,7 +3,7 @@ export default function Background() {
         <div className="absolute inset-0 -z-10 pointer-events-none bg-background w-full h-full overflow-hidden">
             {Array.from({ length: 20 }).map((_, index) => {
                 const size = 1 + Math.random() * 10;
-                const colours = ['accent', 'accent-secondary', 'accent-tertiary'];
+                const colours = ['accent', 'accent-secondary', 'accent-tertiary', 'accent-quaterniary'];
                 const colour = colours[Math.floor(Math.random() * colours.length)];
                 return (
                     <div

@@ -46,7 +46,7 @@ export default function ProjectCard(project: Project) {
                 ))}
             </TagContainer>
         }
-        <Link href={`/projects/${project.slug}`} variant="project">View project →</Link>
+        <Link href={`/projects/${project.slug}`} variant="underline">View project →</Link>
     </Card>
   );
 }

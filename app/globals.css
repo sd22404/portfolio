@@ -10,6 +10,7 @@
   --color-accent: var(--accent);
   --color-accent-secondary: var(--accent-secondary);
   --color-accent-tertiary: var(--accent-tertiary);
+  --color-accent-quaterniary: var(--accent-quaterniary);
   --color-yellow: var(--color-yellow);
   --color-green: var(--color-green);
   --color-blue: var(--color-blue);
@@ -30,6 +31,10 @@ body {
   font-family: var(--font-geist-sans), system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::selection {
   background: var(--background-selection);
   color: var(--foreground);
@@ -46,6 +51,7 @@ body {
   /* --accent-secondary: #f38ba8;     /* red as secondary accent */
   --accent-secondary: var(--color-purple);
   --accent-tertiary: var(--color-green);
+  --accent-quaterniary: var(--color-orange);
   --foreground-lighter: #bac2de;    /* subtext1 */
   --muted: #9399b2;                 /* overlay2 */
   --border: #45475a;                /* surface1 */

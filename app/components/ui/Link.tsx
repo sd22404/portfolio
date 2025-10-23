@@ -3,15 +3,15 @@ import { ReactNode } from 'react';
 interface LinkProps {
   href: string;
   children: ReactNode;
-  variant?: 'nav' | 'text' | 'project';
+  variant?: 'text' | 'text-alt' | 'underline';
   className?: string;
 }
 
 export default function Link({ href, children, variant = 'text', className = '' }: LinkProps) {
-  const variantClasses = {
-    nav: "hover:text-accent transition-colors font-mono text-sm",
-    text: "hover:text-accent transition-colors font-mono text-sm",
-    project: "font-mono text-sm text-accent-tertiary hover:underline"
+  const variantClasses: Record<'text' | 'text-alt' | 'underline', string> = {
+    'text': "hover:text-accent-tertiary transition-colors font-mono text-sm",
+    'text-alt': "hover:text-accent-quaterniary transition-colors font-mono text-sm",
+    'underline': "font-mono text-sm text-accent-tertiary hover:underline",
   };
 
   return (

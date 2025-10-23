@@ -16,11 +16,14 @@ export default function Hero() {
           About me...
         </p>
         <div className="flex gap-4 pt-4">
-          <Button href="#contact" variant="primary">
-            Get in touch
+          <Button href="/CV.pdf" variant="primary" target="_blank" rel="noopener noreferrer">
+            Download CV
           </Button>
           <Button href="#projects" variant="secondary">
             View work
+          </Button>
+          <Button href="#contact" variant="secondary">
+            Get in touch
           </Button>
         </div>
       </div>

@@ -1,12 +1,10 @@
 import Section from "@/app/components/ui/Section";
 import SectionHeading from "@/app/components/ui/SectionHeading";
-import Subtitle from "@/app/components/ui/Subtitle";
 import Text from "@/app/components/ui/Text";
 import Tag from "@/app/components/ui/Tag";
 import TagContainer from "@/app/components/ui/TagContainer";
 import Link from "@/app/components/ui/Link";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import Background from "@/app/components/Background";
 import { projects } from "@/app/components/Projects";
 import Header from "@/app/components/Header";
@@ -34,7 +32,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
     return (
         <div className="relative min-h-screen flex flex-col">
-            <Header links={[{ href: "/", label: "home", variant: "nav" }]} />
+            <Header />
             <Background />
             <div className="flex-1 grid grid-cols-1 xl:grid-cols-2 xl:max-h-screen gap-8 px-4">
                 <Section id="text">
@@ -49,7 +47,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                             ))}
                         </TagContainer>
                     }
-                    <Link href="/#projects" variant="project" className="mt-8">← Back to home</Link>
+                    <Link href="/#projects" variant="underline" className="mt-8">← Back to home</Link>
                 </Section>
                 <Section id="media" className="pb-8 xl:max-h-[calc(100vh-(61px+85px))]">
                     {project.media?.length ? (

@@ -2,12 +2,15 @@ import { ReactNode } from 'react';
 
 interface ButtonProps {
   href?: string;
+  target?: string;
+  rel?: string;
+  onClick?: () => void;
   variant?: 'primary' | 'secondary';
   children: ReactNode;
   className?: string;
 }
 
-export default function Button({ href, variant = 'primary', children, className = '' }: ButtonProps) {
+export default function Button({ href, target, rel, onClick, variant = 'primary', children, className = '' }: ButtonProps) {
   const baseClasses = "px-6 py-3 rounded font-mono text-sm font-semibold transition-all";
   
   const variantClasses = {
@@ -19,14 +22,14 @@ export default function Button({ href, variant = 'primary', children, className 
 
   if (href) {
     return (
-      <a href={href} className={classes}>
+      <a href={href} className={classes} target={target} rel={rel}>
         {children}
       </a>
     );
   }
 
   return (
-    <button className={classes}>
+    <button onClick={onClick} className={classes}>
       {children}
     </button>
   );

@@ -15,10 +15,11 @@ export default function Home() {
       <div className="relative min-h-screen">
         <Background />
         <Header links={[
-          { href: "#", label: "about", variant: "nav" },
-          { href: "#experience", label: "experience", variant: "nav" },
-          { href: "#projects", label: "projects", variant: "nav" },
-          { href: "#contact", label: "contact", variant: "nav" }
+          { href: "#", label: "about", variant: "text" },
+          { href: "#experience", label: "experience", variant: "text" },
+          { href: "#projects", label: "projects", variant: "text" },
+          { href: "#awards", label: "awards", variant: "text" },
+          { href: "#contact", label: "contact", variant: "text" }
         ]} />
         <Hero />
         <Education />
