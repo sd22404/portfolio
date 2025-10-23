@@ -9,9 +9,9 @@ export const projects: Project[] = [
     title: "Shifting Sands",
     description: "Mixed media computer game in Unity.",
     media: [
-        { type: 'image', src: "/projects/shifting-sands/hero-background.png", alt: "Leaderboard Background" },
-        { type: 'image', src: "/projects/shifting-sands/concept-art.png", alt: "Concept Art" },
-        { type: 'video', src: "/projects/shifting-sands/trailer.mp4" }
+        { type: 'image', src: "/portfolio/projects/shifting-sands/hero-background.png", alt: "Leaderboard Background" },
+        { type: 'image', src: "/portfolio/projects/shifting-sands/concept-art.png", alt: "Concept Art" },
+        { type: 'video', src: "/portfolio/projects/shifting-sands/trailer.mp4" }
     ],
     coverImage: "hero-background.png",
     tags: ["C#", "Unity", "OpenCV", "Azure Kinect SDK"],

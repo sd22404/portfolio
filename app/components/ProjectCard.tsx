@@ -32,7 +32,7 @@ export default function ProjectCard(project: Project) {
         {project.coverImage &&
             <div className="mb-4 rounded-md shadow-md relative w-full overflow-hidden h-[clamp(10rem,30vh,18rem)]">
                 <Image
-                    src={`/projects/${project.slug}/${project.coverImage}`}
+                    src={`/portfolio/projects/${project.slug}/${project.coverImage}`}
                     alt={`${project.title} Cover Image`}
                     fill
                     className="object-cover"
