@@ -31,7 +31,7 @@ export default function MediaCarousel({ items = [] as MediaItem[], className = "
   return (
     <Card innerClassName="p-0" outerClassName={`${className}`}>
       <div
-        className="relative w-full mx-auto max-w-4xl h-full overflow-hidden"
+        className="relative w-full h-full mx-auto overflow-hidden"
         role="region"
         aria-roledescription="carousel"
         aria-label="Project media carousel"
@@ -90,7 +90,7 @@ function Slide({ item }: { item: MediaItem }) {
         <img
           src={item.src}
           alt={item.alt ?? ""}
-          className="block h-full w-auto max-w-full object-contain"
+          className="block h-full w-full object-contain rounded-md"
         />
       );
     case "video":
@@ -98,7 +98,7 @@ function Slide({ item }: { item: MediaItem }) {
         <video
           src={item.src}
           controls
-          className="block h-full w-auto max-w-full object-contain bg-black rounded-md"
+          className="block h-full w-full object-contain bg-black rounded-md"
         />
       );
     default:

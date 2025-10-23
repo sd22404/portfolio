@@ -8,7 +8,7 @@ interface SectionProps {
 
 export default function Section({ id, children, className = '' }: SectionProps) {
   return (
-    <section id={id} className={`max-w-5xl mx-auto px-6 pt-32 ${className}`}>
+    <section id={id} className={`max-w-5xl mx-auto px-6 pb-12 pt-20 ${className}`}>
       {children}
     </section>
   );

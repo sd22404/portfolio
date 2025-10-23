@@ -36,7 +36,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <div className="relative min-h-screen flex flex-col">
             <Header links={[{ href: "/", label: "home", variant: "nav" }]} />
             <Background />
-            <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+            <div className="flex-1 grid grid-cols-1 xl:grid-cols-2 xl:max-h-screen gap-8 px-4">
                 <Section id="text">
                     <SectionHeading number="P">{project.title}</SectionHeading>
 
@@ -51,9 +51,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                     }
                     <Link href="/#projects" variant="project" className="mt-8">← Back to home</Link>
                 </Section>
-                <Section id="media" className="pb-8">
+                <Section id="media" className="pb-8 xl:max-h-[calc(100vh-(61px+85px))]">
                     {project.media?.length ? (
-                        <MediaCarousel items={project.media} className="mb-8 h-full" />
+                        <MediaCarousel items={project.media} className="w-full h-full" />
                     ) : null}
                 </Section>
             </div>
