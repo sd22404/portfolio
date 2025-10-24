@@ -10,7 +10,7 @@
   --color-accent: var(--accent);
   --color-accent-secondary: var(--accent-secondary);
   --color-accent-tertiary: var(--accent-tertiary);
-  --color-accent-quaterniary: var(--accent-quaterniary);
+  --color-accent-quaternary: var(--accent-quaternary);
   --color-yellow: var(--color-yellow);
   --color-green: var(--color-green);
   --color-blue: var(--color-blue);
@@ -51,7 +51,7 @@ html {
   /* --accent-secondary: #f38ba8;     /* red as secondary accent */
   --accent-secondary: var(--color-purple);
   --accent-tertiary: var(--color-green);
-  --accent-quaterniary: var(--color-orange);
+  --accent-quaternary: var(--color-orange);
   --foreground-lighter: #bac2de;    /* subtext1 */
   --muted: #9399b2;                 /* overlay2 */
   --border: #45475a;                /* surface1 */
