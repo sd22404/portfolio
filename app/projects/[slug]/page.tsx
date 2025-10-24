@@ -5,7 +5,7 @@ import Tag from "@/app/components/ui/Tag";
 import TagContainer from "@/app/components/ui/TagContainer";
 import Link from "@/app/components/ui/Link";
 import { notFound } from "next/navigation";
-import Background from "@/app/components/Background";
+import Background from "@/app/components/GoLBackground";
 import { projects } from "@/app/components/Projects";
 import Header from "@/app/components/Header";
 import MediaCarousel from "@/app/components/MediaCarousel";

@@ -1,16 +1,25 @@
 import { ReactNode } from 'react';
+import Text from './Text';
+import Underline from './Underline';
 
 interface SectionHeadingProps {
-  number: string;
+  number?: string;
   children: ReactNode;
   className?: string;
 }
 
 export default function SectionHeading({ number, children, className = '' }: SectionHeadingProps) {
   return (
-    <h3 className={`text-3xl font-bold font-mono mb-8 flex items-center gap-3 ${className}`}>
-    {/* <span className="text-[var(--color-accent-secondary)]">{number}.</span> {children} */}
-    <span className="text-foreground">{children}</span>
-    </h3>
+    <div className={`mb-8 ${className}`}>
+      <div className="flex items-center gap-3 mb-2">
+        {number && <Text variant="ornament">
+          [{number}]
+        </Text>}
+        <h3 className="text-3xl font-bold font-mono text-foreground">
+          {children}
+        </h3>
+      </div>
+      <Underline />
+    </div>
   );
 }

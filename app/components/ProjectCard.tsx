@@ -24,29 +24,45 @@ export type Project = {
 
 export default function ProjectCard(project: Project) {
   return (
-    <Card variant="raised">
-        <Subtitle variant="large" className="mb-2">{project.title}</Subtitle>
-        <Text variant="muted" className="mb-4">
-            {project.description}
-        </Text>
-        {project.coverImage &&
-            <div className="mb-4 rounded-md shadow-md relative w-full overflow-hidden h-[clamp(10rem,30vh,18rem)]">
-                <Image
-                    src={`/portfolio/projects/${project.slug}/${project.coverImage}`}
-                    alt={`${project.title} Cover Image`}
-                    fill
-                    className="object-cover"
-                />
-            </div>
-        }
-        {project.tags?.length &&
-            <TagContainer className="mb-4">
-                {project.tags?.map((tag) => (
-                    <Tag key={tag} variant="highlight">{tag}</Tag>
-                ))}
-            </TagContainer>
-        }
-        <Link href={`/projects/${project.slug}`} variant="underline">View project →</Link>
+    <Card variant="raised" outerClassName="transition-all duration-300">
+        <div className="space-y-4">
+          <div className="flex items-center gap-2">
+            <Text variant="ornament-alt">&gt;&gt;</Text>
+            <Subtitle variant="large">{project.title}</Subtitle>
+          </div>
+          
+          {/* Description */}
+          <Text variant="muted">
+              {project.description}
+          </Text>
+          
+          {project.coverImage &&
+              <div className="group/img mb-4 rounded-md overflow-hidden relative w-full h-[clamp(10rem,30vh,18rem)] transition-all duration-300">
+                  <Image
+                      src={`/portfolio/projects/${project.slug}/${project.coverImage}`}
+                      alt={`${project.title} Cover Image`}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover/img:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300" />
+              </div>
+          }
+          
+          {project.tags?.length &&
+              <TagContainer>
+                  {project.tags?.map((tag) => (
+                      <Tag key={tag} variant="highlight">{tag}</Tag>
+                  ))}
+              </TagContainer>
+          }
+          
+          <div className="pt-2">
+            <Link href={`/projects/${project.slug}`} variant="underline" className="inline-flex items-center gap-1 group/link">
+              [View project]
+              <span className="transition-transform duration-200 group-hover/link:translate-x-1">→</span>
+            </Link>
+          </div>
+        </div>
     </Card>
   );
 }

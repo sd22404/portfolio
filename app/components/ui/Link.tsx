@@ -10,8 +10,8 @@ interface LinkProps {
 
 export default function Link({ href, children, variant = 'text', className = '' }: LinkProps) {
   const variantClasses: Record<'text' | 'text-alt' | 'underline', string> = {
-    'text': "hover:text-accent-tertiary transition-colors font-mono text-sm",
-  'text-alt': "hover:text-accent-quaternary transition-colors font-mono text-sm",
+    'text': "hover:text-accent-tertiary transition-all font-mono text-sm",
+    'text-alt': "hover:text-accent-quaternary transition-all font-mono text-sm",
     'underline': "font-mono text-sm text-accent-tertiary hover:underline",
   };
 

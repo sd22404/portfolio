@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 interface TextProps {
   children: ReactNode;
-  variant?: 'body' | 'small' | 'mono' | 'muted' | 'highlight' | 'medium';
+  variant?: 'body' | 'small' | 'mono' | 'muted' | 'highlight' | 'medium' | 'ornament' | 'ornament-alt';
   className?: string;
 }
 
@@ -13,7 +13,9 @@ export default function Text({ children, variant = 'body', className = '' }: Tex
     mono: "font-mono",
     muted: "text-muted font-mono text-sm",
     highlight: "font-mono text-accent",
-    medium: "font-mono text-foreground"
+    medium: "font-mono text-foreground",
+    ornament: "text-accent-tertiary font-mono text-sm select-none",
+    'ornament-alt': "text-accent-quaternary font-mono text-sm select-none",
   };
 
   return (

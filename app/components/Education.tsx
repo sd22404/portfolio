@@ -11,19 +11,24 @@ export default function Education() {
     <Section id="education">
       <SectionHeading number="01">Education</SectionHeading>
       <div className="space-y-6">
-        <Card>
+        <Card variant="raised">
           <div className="flex justify-between items-start mb-2">
             <Subtitle>University of Bristol</Subtitle>
             <Text variant="small">2022 - 2026</Text>
           </div>
           <Text variant="highlight" className="mb-2">Computer Science (MEng)</Text>
-          <Text variant="muted">First Class Honours (Expected)</Text>
-          <TagContainer className="mt-4">
-            <Tag className="text-xs">Deep Learning</Tag>
-            <Tag className="text-xs">Computer Vision</Tag>
-            <Tag className="text-xs">Computer Architecture</Tag>
-            <Tag className="text-xs">Cognitive AI</Tag>
-          </TagContainer>
+          <Text variant="muted" className="mb-4">First Class Honours (Expected)</Text>
+          <div className="space-y-2">
+            <Text variant="ornament-alt" className="text-xs select-text">
+              <span className="text-muted">~/modules</span> $ ls -l
+            </Text>
+            <TagContainer>
+              <Tag className="text-xs">Deep Learning</Tag>
+              <Tag className="text-xs">Computer Vision</Tag>
+              <Tag className="text-xs">Computer Architecture</Tag>
+              <Tag className="text-xs">Cognitive AI</Tag>
+            </TagContainer>
+          </div>
         </Card>
         <Card>
           <div className="flex justify-between items-start mb-2">

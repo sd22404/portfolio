@@ -1,4 +1,4 @@
-import Background from './components/Background';
+import Background from './components/GoLBackground';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Education from './components/Education';

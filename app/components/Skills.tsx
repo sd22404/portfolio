@@ -1,6 +1,7 @@
 import SectionHeading from './ui/SectionHeading';
 import Section from './ui/Section';
 import Card from './ui/Card';
+import Text from './ui/Text';
 import Tag from './ui/Tag';
 import Subtitle from './ui/Subtitle';
 import TagContainer from './ui/TagContainer';
@@ -10,8 +11,11 @@ export default function Skills() {
     <Section id="skills">
       <SectionHeading number="04">Skills & Technologies</SectionHeading>
       <div className="grid md:grid-cols-3 gap-6">
-        <Card>
-          <Subtitle variant="medium" className="mb-4">Languages</Subtitle>
+        <Card variant="glow">
+          <div className="flex items-center gap-2 mb-4">
+            <Text variant="ornament-alt">$</Text>
+            <Subtitle variant="medium">Languages</Subtitle>
+          </div>
           <TagContainer>
             <Tag>TypeScript</Tag>
             <Tag>Python</Tag>
@@ -23,8 +27,11 @@ export default function Skills() {
           </TagContainer>
         </Card>
 
-        <Card>
-          <Subtitle variant="medium" className="mb-4">Frameworks & Libraries</Subtitle>
+        <Card variant="glow">
+          <div className="flex items-center gap-2 mb-4">
+            <Text variant="ornament-alt">⚡</Text>
+            <Subtitle variant="medium">Frameworks & Libs</Subtitle>
+          </div>
           <TagContainer>
             <Tag>Unity</Tag>
             <Tag>PyTorch</Tag>
@@ -35,8 +42,11 @@ export default function Skills() {
           </TagContainer>
         </Card>
 
-        <Card>
-          <Subtitle variant="medium" className="mb-4">Tools & Cloud</Subtitle>
+        <Card variant="glow">
+          <div className="flex items-center gap-2 mb-4">
+            <Text variant="ornament-alt">⚙</Text>
+            <Subtitle variant="medium">Tools & Cloud</Subtitle>
+          </div>
           <TagContainer>
             <Tag>Docker</Tag>
             <Tag>AWS</Tag>

@@ -10,7 +10,7 @@ export default function Experience() {
     <Section id="experience">
       <SectionHeading number="02">Work Experience</SectionHeading>
       <div className="space-y-6">
-        <Card>
+        <Card variant="raised">
           <div className="flex justify-between items-start mb-2">
             <Subtitle>Graduate Teacher Level 1 & 2</Subtitle>
             <Text variant="small">Sep 2025 - Present</Text>

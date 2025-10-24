@@ -14,28 +14,28 @@ export default function Awards() {
             <Subtitle variant="small">Best Game Runner Up</Subtitle>
             <Text variant="small">CSS GameJam 2023</Text>
           </div>
-          <span className="text-3xl z-10">🏆</span>
+          <span className="text-3xl z-10 transition-transform duration-300 group-hover:scale-110">🏆</span>
         </Card>
         <Card variant="highlight" innerClassName="flex justify-between items-center w-full">
           <div>
             <Subtitle variant="small">People's Choice</Subtitle>
             <Text variant="small">CSS GameJam 2024</Text>
           </div>
-          <span className="text-3xl z-10">📜</span>
+          <span className="text-3xl z-10 transition-transform duration-300 group-hover:scale-110">📜</span>
         </Card>
         <Card variant="highlight" innerClassName="flex justify-between items-center w-full">
           <div>
             <Subtitle variant="small">Duke of Edinburgh's Silver Award</Subtitle>
             <Text variant="small">Gold in Progress</Text>
           </div>
-          <span className="text-3xl z-10">⭐</span>
+          <span className="text-3xl z-10 transition-transform duration-300 group-hover:scale-110">⭐</span>
         </Card>
         <Card variant="highlight" innerClassName="flex justify-between items-center w-full">
           <div>
             <Subtitle variant="small">Karate 2nd Kyu</Subtitle>
             <Text variant="small">Brown Belt</Text>
           </div>
-          <span className="text-3xl z-10">🎓</span>
+          <span className="text-3xl z-10 transition-transform duration-300 group-hover:scale-110">🎓</span>
         </Card>
       </div>
     </Section>

@@ -1,28 +1,37 @@
 import Button from './ui/Button';
 import Section from './ui/Section';
+import TerminalBlock from './ui/TerminalBlock';
+import Text from './ui/Text';
 
 export default function Hero() {
   return (
     <Section id="hero" className="py-20 md:py-32">
-      <div className="space-y-6">
-        <div className="font-mono text-accent text-sm">$ whoami</div>
-        <h2 className="text-5xl md:text-7xl font-bold font-mono drop-shadow-xl">
-          Finn<br />
-          <span className="bg-gradient-to-r from-blue via-purple to-orange bg-clip-text text-transparent">
-            Cooper
+      <div className="space-y-12">
+        <div className="space-y-2">
+          <TerminalBlock variant="prompt">whoami</TerminalBlock>
+          <TerminalBlock variant="output">
+            <span className='text-muted font-jetbrains-mono'>Finn Cooper</span>
+          </TerminalBlock>
+        </div>
+
+        <h1 className="text-5xl md:text-7xl font-bold font-mono drop-shadow-xl">
+          <span className="text-foreground">Software</span><br />
+          <span className="bg-gradient-to-r from-blue via-purple to-orange bg-clip-text text-transparent text-glow">
+            Developer
           </span>
-        </h2>
-        <p className="text-foreground-lighter text-lg max-w-2xl font-mono">
+        </h1>
+        <Text variant="mono" className="text-lg max-w-2xl">
           About me...
-        </p>
-        <div className="flex gap-4 pt-4">
-          <Button href="/portfolio/CV.pdf" variant="primary" target="_blank" rel="noopener noreferrer">
+        </Text>
+
+        <div className="flex flex-wrap gap-4 pt-4">
+          <Button href="/portfolio/CV.pdf" variant="glow" target="_blank" rel="noopener noreferrer">
             Download CV
           </Button>
           <Button href="#projects" variant="secondary">
             View work
           </Button>
-          <Button href="#contact" variant="secondary">
+          <Button href="#contact" variant="ghost">
             Get in touch
           </Button>
         </div>
