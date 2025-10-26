@@ -21,6 +21,17 @@ export default function Background() {
         const css = getComputedStyle(document.documentElement);
         const colour = css.getPropertyValue("--accent").trim() || "#89b4fa";
 
+        // CONFIG
+        const baseAlpha = 0.06;
+        const RUN_DURATION_MS = 6000;
+        const FADE_OUT_MS = 3000;
+        let start = performance.now();
+        let last = performance.now();
+        let stopped = false;
+        let raf = 0;
+        const FPS = 10;
+        let interval = 1000 / FPS;
+
         let cols = 0;
         let rows = 0;
         let cellSize = 8;
@@ -72,6 +83,14 @@ export default function Background() {
             canvasEl.style.height = `${height}px`;
             context.setTransform(dpr, 0, 0, dpr, 0, 0);
             createGrid(width, height);
+
+            // reset animation
+            if (raf > 0) cancelAnimationFrame(raf);
+            start = performance.now();
+            last = performance.now();
+            interval = 1000 / FPS;
+            stopped = false;
+            raf = requestAnimationFrame(loop);
         }
 
         function index(x: number, y: number) {
@@ -112,7 +131,7 @@ export default function Background() {
             context.clearRect(0, 0, width, height);
             
             context.imageSmoothingEnabled = false;
-            context.globalAlpha = 0.06;
+            context.globalAlpha = baseAlpha;
             context.fillStyle = colour;
             context.beginPath();
             for (let y = 0; y < rows; y++) {
@@ -126,13 +145,27 @@ export default function Background() {
             context.globalAlpha = 1;
         }
 
-        let raf = 0;
-        let last = performance.now();
-        // FPS
-        const interval = 1000 / 10;
+        function stopLoop() {
+            if (stopped) return;
+            stopped = true;
+            if (raf) cancelAnimationFrame(raf);
+            raf = 0;
+        }
 
         function loop(now: number) {
             raf = requestAnimationFrame(loop);
+
+            // stop after duration
+            const elapsed = now - start;
+            if (elapsed >= RUN_DURATION_MS) {
+                if (elapsed >= RUN_DURATION_MS + FADE_OUT_MS) {
+                    stopLoop();
+                    return;
+                } else {
+                    interval = (1000 / FPS) / Math.max(0.1, 1 - (elapsed - RUN_DURATION_MS) / FADE_OUT_MS);
+                }
+            }
+
             if (now - last < interval) return;
             last = now;
             stepInPlace();
@@ -141,15 +174,21 @@ export default function Background() {
 
 
         resize();
-        draw();
-        raf = requestAnimationFrame(loop);
 
         const ro = new ResizeObserver(() => resize());
         ro.observe(containerEl);
 
+        const onVisibility = () => {
+            if (document.hidden) {
+                stopLoop();
+            }
+        };
+        document.addEventListener("visibilitychange", onVisibility);
+
         return () => {
             cancelAnimationFrame(raf);
             ro.disconnect();
+            document.removeEventListener("visibilitychange", onVisibility);
         };
     }, []);
 
