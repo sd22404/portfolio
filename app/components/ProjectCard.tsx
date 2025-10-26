@@ -15,6 +15,7 @@ export type MediaItem = {
 
 export type Project = {
     slug: string;
+    ticker?: string;
     title: string;
     description: string;
     media?: MediaItem[];

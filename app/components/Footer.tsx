@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2">
             <TerminalBlock variant="prompt">echo $COPYRIGHT</TerminalBlock>
-            <TerminalBlock variant="output">
+            <TerminalBlock variant="output" showCursor>
               Built with Next.js & Tailwind CSS | © 2025 Finn Cooper
             </TerminalBlock>
           </div>

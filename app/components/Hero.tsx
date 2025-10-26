@@ -9,8 +9,8 @@ export default function Hero() {
       <div className="space-y-12">
         <div className="space-y-2">
           <TerminalBlock variant="prompt">whoami</TerminalBlock>
-          <TerminalBlock variant="output">
-            <span className='text-muted font-jetbrains-mono'>Finn Cooper</span>
+          <TerminalBlock variant="output" showCursor>
+            Finn Cooper
           </TerminalBlock>
         </div>
 

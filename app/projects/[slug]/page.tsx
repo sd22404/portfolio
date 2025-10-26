@@ -36,7 +36,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <Background />
             <div className="flex-1 grid grid-cols-1 xl:grid-cols-2 xl:max-h-screen gap-8 px-4">
                 <Section id="text">
-                    <SectionHeading number="P">{project.title}</SectionHeading>
+                    <SectionHeading number={project.ticker || project.title.slice(0, 3).toUpperCase()}>{project.title}</SectionHeading>
 
                     <Text variant="muted" className="mb-6">{project.description}</Text>
 
@@ -49,7 +49,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                     }
                     <Link href="/#projects" variant="underline" className="mt-8">← Back to home</Link>
                 </Section>
-                <Section id="media" className="pb-8 xl:max-h-[calc(100vh-(61px+85px))]">
+                <Section id="media" className="pb-8 xl:max-h-[calc(100vh-(61px+121px))]">
                     {project.media?.length ? (
                         <MediaCarousel items={project.media} className="w-full h-full" />
                     ) : null}

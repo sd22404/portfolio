@@ -14,13 +14,13 @@ export default function TerminalBlock({
   showCursor = false 
 }: TerminalBlockProps) {
   const variantClasses = {
-    prompt: 'font-jetbrains-mono text-green flex items-center gap-2',
+    prompt: 'font-jetbrains-mono text-accent-tertiary',
     output: 'font-jetbrains-mono text-foreground-lighter',
     code: 'code-block'
   };
 
   const prefix = {
-    prompt: <span className="text-accent-tertiary select-none">$</span>,
+    prompt: <span className="select-none">$ </span>,
     output: <span className="text-muted select-none">› </span>,
     code: null
   };

@@ -19,14 +19,14 @@ export default function Education() {
           <Text variant="highlight" className="mb-2">Computer Science (MEng)</Text>
           <Text variant="muted" className="mb-4">First Class Honours (Expected)</Text>
           <div className="space-y-2">
-            <Text variant="ornament-alt" className="text-xs select-text">
+            <Text variant="ornament-alt" className="font-jetbrains-mono text-xs select-text">
               <span className="text-muted">~/modules</span> $ ls -l
             </Text>
             <TagContainer>
-              <Tag className="text-xs">Deep Learning</Tag>
-              <Tag className="text-xs">Computer Vision</Tag>
-              <Tag className="text-xs">Computer Architecture</Tag>
-              <Tag className="text-xs">Cognitive AI</Tag>
+              <Tag variant='default'>Deep Learning</Tag>
+              <Tag variant='default'>Computer Vision</Tag>
+              <Tag variant='default'>Computer Architecture</Tag>
+              <Tag variant='default'>Cognitive AI</Tag>
             </TagContainer>
           </div>
         </Card>

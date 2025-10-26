@@ -6,6 +6,7 @@ import ProjectCard, { Project } from './ProjectCard';
 export const projects: Project[] = [
   {
     slug: "shifting-sands",
+    ticker: "SS",
     title: "Shifting Sands",
     description: "Mixed media computer game in Unity.",
     media: [
@@ -18,18 +19,21 @@ export const projects: Project[] = [
   },
   {
     slug: "cpp-rasteriser-raytracer",
+    ticker: "RAY",
     title: "C++ Rasteriser & Ray-tracer",
     description: "Interactive C++ software rasteriser and ray-tracer from scratch.",
     tags: ["C++", "SDL2", "OpenMP"],
   },
   {
     slug: "livestock-management-app",
+    ticker: "LMA",
     title: "Livestock Management App",
     description: "Livestock management web app for a local city farm.",
     tags: ["React", "TypeScript", "Spring Boot", "MongoDB"],
   },
   {
     slug: "distributed-game-of-life",
+    ticker: "GOL",
     title: "Distributed Game of Life",
     description: "A distributed implementation of Conway's Game of Life to AWS workers.",
     tags: ["Go", "AWS"],
