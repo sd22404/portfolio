@@ -29,7 +29,7 @@ export default function MediaCarousel({ items = [] as MediaItem[], className = "
   if (!slides.length) return null;
 
   return (
-    <Card innerClassName="p-0" outerClassName={`${className}`}>
+    <Card className={`p-0 ${className}`}>
       <div
         className="relative w-full h-full mx-auto overflow-hidden"
         role="region"

@@ -8,7 +8,7 @@ export default function Contact() {
     return (
         <Section id="contact" className="mb-20">
             <SectionHeading number="06">Get In Touch</SectionHeading>
-            <Card variant="glow" outerClassName="max-w-2xl mx-auto" innerClassName='text-center space-y-6'>
+            <Card variant="glow" className="max-w-2xl mx-auto text-center space-y-6">
                 <Text variant="medium">
                     Contact me...
                 </Text>

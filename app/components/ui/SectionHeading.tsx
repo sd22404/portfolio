@@ -11,7 +11,7 @@ interface SectionHeadingProps {
 export default function SectionHeading({ number, children, className = '' }: SectionHeadingProps) {
   return (
     <div className={`mb-8 ${className}`}>
-      <div className="flex items-center gap-3 mb-2">
+      <div className="flex items-center gap-3 mb-1">
         {number && <Text variant="ornament">
           [{number}]
         </Text>}

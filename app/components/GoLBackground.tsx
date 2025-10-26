@@ -19,14 +19,19 @@ export default function Background() {
         const context = ctx;
 
         const css = getComputedStyle(document.documentElement);
-        const colorA = css.getPropertyValue("--accent").trim() || "#89b4fa";
-        const colorB = css.getPropertyValue("--accent").trim() || "#cba6f7";
-        const singleAccent = colorA === colorB;
+        const colour = css.getPropertyValue("--accent").trim() || "#89b4fa";
 
         let cols = 0;
         let rows = 0;
         let cellSize = 8;
-        let grid: Uint8Array = new Uint8Array(0);
+    
+        let current: Uint8Array = new Uint8Array(0);
+        let next: Uint8Array = new Uint8Array(0);
+
+        let xL: Uint16Array = new Uint16Array(0);
+        let xR: Uint16Array = new Uint16Array(0);
+        let yU: Uint16Array = new Uint16Array(0);
+        let yD: Uint16Array = new Uint16Array(0);
 
         const dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
 
@@ -34,9 +39,24 @@ export default function Background() {
             cellSize = Math.max(4, Math.floor(width / 100));
             cols = Math.max(10, Math.floor(width / cellSize));
             rows = Math.max(10, Math.floor(height / cellSize));
-            grid = new Uint8Array(cols * rows);
-            for (let i = 0; i < grid.length; i++) {
-                grid[i] = Math.random() < 0.1 ? 1 : 0;
+            const len = cols * rows;
+            current = new Uint8Array(len);
+            next = new Uint8Array(len);
+            // Seed with random live cells
+            for (let i = 0; i < len; i++) current[i] = Math.random() < 0.1 ? 1 : 0;
+
+            // Precompute wrap indices for neighbors
+            xL = new Uint16Array(cols);
+            xR = new Uint16Array(cols);
+            for (let x = 0; x < cols; x++) {
+                xL[x] = (x + cols - 1) % cols;
+                xR[x] = (x + 1) % cols;
+            }
+            yU = new Uint16Array(rows);
+            yD = new Uint16Array(rows);
+            for (let y = 0; y < rows; y++) {
+                yU[y] = (y + rows - 1) % rows;
+                yD[y] = (y + 1) % rows;
             }
         }
 
@@ -58,44 +78,51 @@ export default function Background() {
             return y * cols + x;
         }
 
-        function step(prev: Uint8Array) {
-            const next = new Uint8Array(prev.length);
+        function stepInPlace() {
+            // Compute next from current using precomputed wrap indices (no % in hot loop)
             for (let y = 0; y < rows; y++) {
+                const yu = yU[y];
+                const yd = yD[y];
                 for (let x = 0; x < cols; x++) {
+                    const xl = xL[x];
+                    const xr = xR[x];
+                    const idx = index(x, y);
                     let n = 0;
-                    for (let dy = -1; dy <= 1; dy++) {
-                        for (let dx = -1; dx <= 1; dx++) {
-                            if (dx === 0 && dy === 0) continue;
-                            const nx = (x + dx + cols) % cols;
-                            const ny = (y + dy + rows) % rows;
-                            n += prev[index(nx, ny)];
-                        }
-                    }
-                    const alive = prev[index(x, y)] === 1;
-                    if (alive && (n === 2 || n === 3)) next[index(x, y)] = 1;
-                    else if (!alive && n === 3) next[index(x, y)] = 1;
-                    else next[index(x, y)] = 0;
+                    n += current[index(xl, yu)];
+                    n += current[index(x,  yu)];
+                    n += current[index(xr, yu)];
+                    n += current[index(xl, y )];
+                    n += current[index(xr, y )];
+                    n += current[index(xl, yd)];
+                    n += current[index(x,  yd)];
+                    n += current[index(xr, yd)];
+
+                    const alive = current[idx] === 1;
+                    // Conway rules
+                    next[idx] = (alive && (n === 2 || n === 3)) || (!alive && n === 3) ? 1 : 0;
                 }
             }
-            return next;
+            // Swap buffers
+            [current, next] = [next, current];
         }
 
-        function draw(current: Uint8Array) {
+        function draw() {
             const width = canvasEl.width / dpr;
             const height = canvasEl.height / dpr;
             context.clearRect(0, 0, width, height);
-
+            
+            context.imageSmoothingEnabled = false;
+            context.globalAlpha = 0.06;
+            context.fillStyle = colour;
+            context.beginPath();
             for (let y = 0; y < rows; y++) {
                 for (let x = 0; x < cols; x++) {
                     if (current[index(x, y)] === 1) {
-                        const useA = singleAccent || ((x + y) & 1) === 0;
-                        context.fillStyle = useA ? colorA : colorB;
-                        // CELL ALPHA
-                        context.globalAlpha = 0.05;
-                        context.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+                        context.roundRect(x * cellSize, y * cellSize, cellSize, cellSize, 5);
                     }
                 }
             }
+            context.fill();
             context.globalAlpha = 1;
         }
 
@@ -103,20 +130,18 @@ export default function Background() {
         let last = performance.now();
         // FPS
         const interval = 1000 / 10;
-        let state: Uint8Array;
 
         function loop(now: number) {
             raf = requestAnimationFrame(loop);
             if (now - last < interval) return;
             last = now;
-            state = step(state);
-            draw(state);
+            stepInPlace();
+            draw();
         }
 
 
         resize();
-        state = grid;
-        draw(state);
+        draw();
         raf = requestAnimationFrame(loop);
 
         const ro = new ResizeObserver(() => resize());
