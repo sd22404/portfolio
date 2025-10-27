@@ -10,7 +10,7 @@ export default function Skills() {
   return (
     <Section id="skills">
       <SectionHeading number="04">Skills & Technologies</SectionHeading>
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <Card variant="glow">
           <div className="flex items-center gap-2 mb-4">
             <Text variant="ornament-alt">$</Text>

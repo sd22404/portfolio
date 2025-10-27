@@ -23,7 +23,7 @@ export default function Background() {
 
         // CONFIG
         const baseAlpha = 0.06;
-        const RUN_DURATION_MS = 6000;
+        const RUN_DURATION_MS = 7000;
         const FADE_OUT_MS = 3000;
         let start = performance.now();
         let last = performance.now();
@@ -47,9 +47,9 @@ export default function Background() {
         const dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
 
         function createGrid(width: number, height: number) {
-            cellSize = Math.max(4, Math.floor(width / 100));
-            cols = Math.max(10, Math.floor(width / cellSize));
-            rows = Math.max(10, Math.floor(height / cellSize));
+            cellSize = Math.max(4, Math.floor(width / 50));
+            cols = Math.max(5, Math.floor(width / cellSize));
+            rows = Math.max(5, Math.floor(height / cellSize));
             const len = cols * rows;
             current = new Uint8Array(len);
             next = new Uint8Array(len);

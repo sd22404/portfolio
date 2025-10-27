@@ -2,7 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import type { MediaItem } from "./ProjectCard";
-import Card from "./ui/Card";
+import Card from "../ui/Card";
 
 export default function MediaCarousel({ items = [] as MediaItem[], className = "" }: { items?: MediaItem[], className?: string }) {
   const slides = useMemo(() => items.filter(Boolean), [items]);

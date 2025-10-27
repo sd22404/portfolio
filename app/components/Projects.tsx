@@ -1,8 +1,7 @@
 import SectionHeading from './ui/SectionHeading';
 import Section from './ui/Section';
-import ProjectCard, { Project } from './ProjectCard';
+import ProjectCard, { Project } from './sub/ProjectCard';
 
-// Minimal in-file data; consider moving to a data module later
 export const projects: Project[] = [
   {
     slug: "shifting-sands",
@@ -26,7 +25,7 @@ export const projects: Project[] = [
   {
     slug: "cpp-rasteriser-raytracer",
     ticker: "RAY",
-    title: "C++ Rasteriser & Ray-tracer",
+    title: "Interactive Ray-tracer",
     description: "Interactive C++ software rasteriser and ray-tracer from scratch.",
     content: [
       `Wrote an .obj and .mtl parser to load custom scenes and assets.`,
@@ -47,7 +46,7 @@ export const projects: Project[] = [
       `Employed Spring Boot to quickly get a Java backend with MongoDB up and running.`,
       `Leveraged React (TypeScript) with Google’s Material Design components for a professional-looking frontend.`
     ],
-    tags: ["React", "TypeScript", "Spring Boot", "MongoDB"],
+    tags: ["React", "TypeScript", "Spring Boot", "MongoDB", "Docker"],
   },
   {
     slug: "distributed-game-of-life",
@@ -59,7 +58,7 @@ export const projects: Project[] = [
       `Distributed the single-threaded system to four AWS workers, with a single broker node for task management.`,
       `Introduced a halo-exchange technique via RPCs to optimise Game of Life world division among workers.`,
     ],
-    tags: ["Go", "AWS"],
+    tags: ["Go", "SDL2", "AWS"],
   },
 ];
 
@@ -67,7 +66,7 @@ export default function Projects() {
   return (
     <Section id="projects">
       <SectionHeading number="03">Featured Projects</SectionHeading>
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid lg:grid-cols-2 3xl:grid-cols-3 gap-6">
         {projects.map((project) => (
           <ProjectCard key={project.slug} {...project} />
         ))}

@@ -8,7 +8,7 @@ interface BulletListProps {
 
 export default function BulletList({ items, className = '' }: BulletListProps) {
   return (
-  <ul className={`space-y-2 ${className}`}>
+  <ul className={`space-y-1 ${className}`}>
       {items.map((item, index) => (
         <li key={index} className="flex gap-2">
           <Text variant="ornament-alt">&gt;</Text>

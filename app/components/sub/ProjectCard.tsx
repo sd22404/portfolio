@@ -1,10 +1,10 @@
 import React from 'react';
-import Card from './ui/Card';
-import Subtitle from './ui/Subtitle';
-import TagContainer from './ui/TagContainer';
-import Tag from './ui/Tag';
-import Link from './ui/Link';
-import Text from './ui/Text';
+import Card from '../ui/Card';
+import Subtitle from '../ui/Subtitle';
+import TagContainer from '../ui/TagContainer';
+import Tag from '../ui/Tag';
+import Link from '../ui/Link';
+import Text from '../ui/Text';
 import Image from 'next/image';
 
 export type MediaItem = {
@@ -28,12 +28,11 @@ export default function ProjectCard(project: Project) {
     return (
         <Card variant="raised">
             <div className="space-y-4">
-                <div className="flex items-center gap-2">
+                <div className="flex gap-2 items-center">
                     <Text variant="ornament-alt">&gt;&gt;</Text>
                     <Subtitle variant="large">{project.title}</Subtitle>
                 </div>
 
-                {/* Description */}
                 <Text variant="muted">
                     {project.description.slice(0, 200)}{project.description.length > 200 ? '...' : ''}
                 </Text>

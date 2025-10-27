@@ -26,7 +26,7 @@ export default function TerminalBlock({
   };
 
   return (
-    <div className={`${variantClasses[variant]} ${className}`}>
+    <div className={`${variantClasses[variant]} ${variant !== 'code' ? 'hang-prompt' : ''} ${className}`}>
       {prefix[variant]}
       <span className={showCursor ? 'cursor-blink' : ''}>{children}</span>
     </div>

@@ -8,7 +8,7 @@ import { notFound } from "next/navigation";
 import Background from "@/app/components/GoLBackground";
 import { projects } from "@/app/components/Projects";
 import Header from "@/app/components/Header";
-import MediaCarousel from "@/app/components/MediaCarousel";
+import MediaCarousel from "@/app/components/sub/MediaCarousel";
 import Footer from "@/app/components/Footer";
 import BulletList from "@/app/components/ui/BulletList";
 

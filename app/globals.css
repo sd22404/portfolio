@@ -36,6 +36,19 @@ html {
   scroll-behavior: smooth;
 }
 
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;            /* Chrome, Safari, Opera */
+}
+
+.hang-prompt {
+  padding-left: 2ch;
+  text-indent: -2ch;
+}
+
 ::selection {
   background: var(--background-selection);
   color: var(--foreground);
@@ -49,7 +62,6 @@ html {
   --foreground: #cdd6f4;            /* text */
 
   --accent: #89b4fa;                /* blue as primary accent */
-  /* --accent-secondary: #f38ba8;     /* red as secondary accent */
   --accent-secondary: var(--color-purple);
   --accent-tertiary: var(--color-green);
   --accent-quaternary: var(--color-orange);
@@ -65,7 +77,6 @@ html {
   --color-orange: #fab387;          /* peach (orange) */
 }
 
-/* Terminal cursor blink */
 @keyframes blink {
   0%, 49% {
     opacity: 1;
@@ -81,7 +92,6 @@ html {
   margin-left: 2px;
 }
 
-/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
