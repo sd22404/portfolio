@@ -8,7 +8,7 @@ import TagContainer from './ui/TagContainer';
 
 export default function Education() {
   return (
-    <Section id="education">
+    <Section id="education" bgColour='background-lighter'>
       <SectionHeading number="01">Education</SectionHeading>
       <div className="grid lg:grid-cols-2 gap-6">
         <Card variant="raised" className="lg:col-span-2">

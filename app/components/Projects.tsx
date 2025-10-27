@@ -36,9 +36,9 @@ export const projects: Project[] = [
     tags: ["C++", "SDL2", "OpenMP"],
   },
   {
-    slug: "livestock-management-app",
+    slug: "livestock-management",
     ticker: "LMA",
-    title: "Livestock Management",
+    title: "Livestock Management App",
     description: "A comprehensive livestock management web app made using React and Spring Boot for a local city farm.",
     content: [
       `Collaborated on a GitHub repository; made use of branches, created and reviewed PRs.`,
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     tags: ["React", "TypeScript", "Spring Boot", "MongoDB", "Docker"],
   },
   {
-    slug: "distributed-game-of-life",
+    slug: "game-of-life",
     ticker: "GOL",
     title: "GoLang Game of Life",
     description: "A simulation of Conway’s Game of Life written in Go and distributed among AWS workers.",

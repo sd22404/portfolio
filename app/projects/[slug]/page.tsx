@@ -5,7 +5,7 @@ import Tag from "@/app/components/ui/Tag";
 import TagContainer from "@/app/components/ui/TagContainer";
 import Link from "@/app/components/ui/Link";
 import { notFound } from "next/navigation";
-import Background from "@/app/components/GoLBackground";
+import Background from "@/app/components/Background";
 import { projects } from "@/app/components/Projects";
 import Header from "@/app/components/Header";
 import MediaCarousel from "@/app/components/sub/MediaCarousel";
@@ -36,7 +36,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     return (
         <div className="relative min-h-screen flex flex-col">
             <Header />
-            <Background />
+            {slug == 'game-of-life' ? <Background variant="gol" /> : <Background />}
             <div className={`flex-1 grid grid-cols-1 ${hasMedia ? 'xl:grid-cols-2 xl:max-h-screen' : ''} gap-8 px-4`}>
                 <Section id="text">
                     <SectionHeading number={project.ticker || project.title.slice(0, 3).toUpperCase()}>{project.title}</SectionHeading>

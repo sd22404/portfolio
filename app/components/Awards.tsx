@@ -4,7 +4,7 @@ import Award from './sub/Award';
 
 export default function Awards() {
     return (
-        <Section id="awards">
+        <Section id="awards" bgColour='background-lighter'>
             <SectionHeading number="05">Awards & Recognition</SectionHeading>
             <div className="grid md:grid-cols-2 2xl:grid-cols-3 gap-6">
                 {/** Star icon */}

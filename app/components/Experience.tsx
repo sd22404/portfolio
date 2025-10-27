@@ -7,7 +7,7 @@ import Subtitle from './ui/Subtitle';
 
 export default function Experience() {
   return (
-    <Section id="experience">
+    <Section id="experience" bgColour='background-lighter'>
       <SectionHeading number="02">Work Experience</SectionHeading>
       <div className="grid lg:grid-cols-2 gap-6">
         <Card variant="raised" className="lg:col-span-2">
