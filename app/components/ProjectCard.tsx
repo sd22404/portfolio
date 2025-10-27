@@ -18,6 +18,7 @@ export type Project = {
     ticker?: string;
     title: string;
     description: string;
+    content?: string[];
     media?: MediaItem[];
     coverImage?: string;
     tags?: string[];
@@ -34,7 +35,7 @@ export default function ProjectCard(project: Project) {
 
                 {/* Description */}
                 <Text variant="muted">
-                    {project.description}
+                    {project.description.slice(0, 200)}{project.description.length > 200 ? '...' : ''}
                 </Text>
 
                 {project.coverImage &&

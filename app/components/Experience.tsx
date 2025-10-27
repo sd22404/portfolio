@@ -16,10 +16,26 @@ export default function Experience() {
             <Text variant="small">Sep 2025 - Present</Text>
           </div>
           <Text variant="highlight" className="mb-3">University of Bristol</Text>
+          <div className='flex mb-2'>
+            <Text>
+              Supported teaching of lab sessions for the Computer Graphics unit
+            </Text>
+            <Text variant="ornament-alt" className="select-text">:</Text>
+          </div>
           <BulletList items={[
-            'details of role responsibilities and achievements',
-            'details of role responsibilities and achievements',
-            'details of role responsibilities and achievements'
+            'Guided other students through both technical and theoretical issues.',
+            'Addressed questions about course structure and further study.',
+          ]} />
+          <div className='mt-4 mb-2 flex'>
+            <Text>
+              Mentored a team of students on their Software Engineering Project
+            </Text>
+            <Text variant="ornament-alt" className="select-text">:</Text>
+          </div>
+          <BulletList items={[
+            'Ensured all members were organised and regularly contributing.',
+            'Advised them on planning, designing, and building their software.',
+            'Gave weekly feedback on their progress and answered any questions.'
           ]} />
         </Card>
 
@@ -29,10 +45,15 @@ export default function Experience() {
             <Text variant="small">Sep 2020 - May 2022</Text>
           </div>
           <Text variant="highlight" className="mb-3">Rushfields Plant Centre Ltd</Text>
+          <div className='flex mb-2'>
+            <Text>
+              Served customers at a local garden centre’s farm shop
+            </Text>
+            <Text variant="ornament-alt" className="select-text">:</Text>
+          </div>
           <BulletList items={[
-            'details of role responsibilities and achievements',
-            'details of role responsibilities and achievements',
-            'details of role responsibilities and achievements'
+            'Managed customer-facing stock, conducted sales on the till.',
+            'Greeted / served customers on the cheese, meat and pastry counters.',
           ]} />
         </Card>
 
@@ -42,10 +63,15 @@ export default function Experience() {
             <Text variant="small">Jul 2019 - Jul 2019</Text>
           </div>
           <Text variant="highlight" className="mb-3">MakeReal Ltd</Text>
+          <div className='flex mb-2'>
+            <Text>
+              Immersed myself in the workings of a small VR company
+            </Text>
+            <Text variant="ornament-alt" className="select-text">:</Text>
+          </div>
           <BulletList items={[
-            'details of role responsibilities and achievements',
-            'details of role responsibilities and achievements',
-            'details of role responsibilities and achievements'
+            'Took part in daily stand-ups, user-tested in-development products.',
+            'Created an interactive VR game in Unity with a co-worker.',
           ]} />
         </Card>
       </div>
