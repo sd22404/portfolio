@@ -15,7 +15,7 @@ export default function Header({ links = [] as LinkItem[] }) {
                     <Link
                         variant="underline"
                         href="/#"
-                        className="font-mono text-xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent text-nowrap transition-all duration-300 hover:scale-105"
+                        className="h-15 inline-flex items-center font-mono text-xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent text-nowrap transition-all duration-300 hover:scale-105"
                     >
                         &lt;portfolio&gt;
                     </Link>

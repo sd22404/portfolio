@@ -38,7 +38,7 @@ export const projects: Project[] = [
   {
     slug: "livestock-management-app",
     ticker: "LMA",
-    title: "Livestock Management App",
+    title: "Livestock Management",
     description: "A comprehensive livestock management web app made using React and Spring Boot for a local city farm.",
     content: [
       `Collaborated on a GitHub repository; made use of branches, created and reviewed PRs.`,
@@ -51,7 +51,7 @@ export const projects: Project[] = [
   {
     slug: "distributed-game-of-life",
     ticker: "GOL",
-    title: "Distributed Game of Life",
+    title: "GoLang Game of Life",
     description: "A simulation of Conway’s Game of Life written in Go and distributed among AWS workers.",
     content: [
       `Parallelised a serial implementation of GoL using Go channels, synchronising the threads at each turn cycle.`,
