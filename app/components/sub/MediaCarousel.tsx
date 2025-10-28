@@ -90,6 +90,8 @@ function Slide({ item }: { item: MediaItem }) {
         <img
           src={item.src}
           alt={item.alt ?? ""}
+          loading="lazy"
+          decoding="async"
           className="block h-full w-full object-contain rounded-md"
         />
       );
@@ -98,6 +100,8 @@ function Slide({ item }: { item: MediaItem }) {
         <video
           src={item.src}
           controls
+          preload="metadata"
+          playsInline
           className="block h-full w-full object-contain bg-black rounded-md"
         />
       );

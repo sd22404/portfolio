@@ -22,7 +22,7 @@ export default function Background() {
         const colour = css.getPropertyValue("--accent").trim() || "#89b4fa";
 
         // CONFIG
-        const baseAlpha = 0.06;
+        const baseAlpha = 0.07;
         const RUN_DURATION_MS = 7000;
         const FADE_OUT_MS = 3000;
         let start = performance.now();

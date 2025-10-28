@@ -1,4 +1,3 @@
-import Background from './components/Background';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Education from './components/Education';
@@ -12,7 +11,6 @@ import Footer from './components/Footer';
 export default function Home() {
   return (
       <div className="relative min-h-screen">
-        <Background />
         <Header links={[
           { href: "#hero", label: "about", variant: "text" },
           { href: "#experience", label: "experience", variant: "text" },

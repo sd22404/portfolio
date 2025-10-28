@@ -17,7 +17,7 @@
   --color-pink: var(--color-pink);
   --color-purple: var(--color-purple);
   --color-orange: var(--color-orange);
-  --color-foreground-lighter: var(--foreground-lighter);
+  --color-foreground-darker: var(--foreground-darker);
   --color-muted: var(--muted);
   --color-border: var(--border);
 
@@ -27,7 +27,8 @@
 }
 
 body {
-  background: color-mix(in oklab, var(--background-lighter), var(--background));
+  /* background: color-mix(in oklab, var(--background-lighter), var(--background)); */
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
@@ -56,8 +57,9 @@ html {
 
 :root {
   /* Catppuccin Mocha */
-  --background: #1e1e2e;            /* base */
-  --background-lighter: #313244;    /* surface0 for cards */
+  --background: #11111b;            /* crust */
+  --background-lighter: #181825;    /* mantle */
+  /*--background-lighter: #313244;    /* surface0 for cards */
   --background-selection: #45475a;  /* surface1 for selection */
   --foreground: #cdd6f4;            /* text */
 
@@ -65,7 +67,7 @@ html {
   --accent-secondary: var(--color-purple);
   --accent-tertiary: var(--color-green);
   --accent-quaternary: var(--color-orange);
-  --foreground-lighter: #bac2de;    /* subtext1 */
+  --foreground-darker: #bac2de;    /* subtext1 */
   --muted: #9399b2;                 /* overlay2 */
   --border: #45475a;                /* surface1 */
 

@@ -6,7 +6,7 @@ import Text from './ui/Text';
 
 export default function Contact() {
     return (
-        <Section id="contact" className="mb-20">
+        <Section id="contact">
             <SectionHeading number="06">Get In Touch</SectionHeading>
             <Card variant="glow" className="max-w-2xl mx-auto text-center space-y-6">
                 <Text variant="medium">

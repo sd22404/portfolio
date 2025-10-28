@@ -5,7 +5,7 @@ import Tag from "@/app/components/ui/Tag";
 import TagContainer from "@/app/components/ui/TagContainer";
 import Link from "@/app/components/ui/Link";
 import { notFound } from "next/navigation";
-import Background from "@/app/components/Background";
+import Background from "@/app/components/sub/GoLBackground";
 import { projects } from "@/app/components/Projects";
 import Header from "@/app/components/Header";
 import MediaCarousel from "@/app/components/sub/MediaCarousel";
@@ -36,9 +36,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     return (
         <div className="relative min-h-screen flex flex-col">
             <Header />
-            {slug == 'game-of-life' ? <Background variant="gol" /> : <Background />}
+            {slug === 'game-of-life' && <Background />}
             <div className={`flex-1 grid grid-cols-1 ${hasMedia ? 'xl:grid-cols-2 xl:max-h-screen' : ''} gap-8 px-4`}>
-                <Section id="text">
+                <Section id="text" bgColour="transparent" className="pt-20 sm:pt-24">
                     <SectionHeading number={project.ticker || project.title.slice(0, 3).toUpperCase()}>{project.title}</SectionHeading>
 
                     <Text variant="muted" className="mb-6">{project.description}</Text>
@@ -54,8 +54,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                     <Link href="/#projects" variant="underline" className="mt-8">← Back to home</Link>
                 </Section>
                 {hasMedia ? (
-                    <Section id="media" className="xl:max-h-[calc(100vh-(61px+121px))]">
-                            <MediaCarousel items={project.media} className="w-full h-full" />
+                    <Section id="media" bgColour="transparent" className="xl:max-h-[calc(100vh-(61px+121px))]">
+                        <MediaCarousel items={project.media} className="w-full h-full" />
                     </Section>
                 ) : null}
             </div>

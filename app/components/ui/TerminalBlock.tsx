@@ -15,7 +15,7 @@ export default function TerminalBlock({
 }: TerminalBlockProps) {
   const variantClasses = {
     prompt: 'font-jetbrains-mono text-accent-tertiary',
-    output: 'font-jetbrains-mono text-foreground-lighter',
+    output: 'font-jetbrains-mono text-foreground-darker',
     code: 'code-block'
   };
 

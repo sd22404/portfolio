@@ -18,7 +18,7 @@ export default function Experience() {
           <Text variant="highlight" className="mb-3">University of Bristol</Text>
           <div className="grid grid-cols-1 2xl:grid-cols-2 gap-4">
             <div>
-              <Text className="mb-2">
+              <Text variant='body' className="mb-2">
                 Supported teaching of lab sessions for the Computer Graphics unit
                 <span className="text-accent-quaternary select-text">:</span>
               </Text>
@@ -28,7 +28,7 @@ export default function Experience() {
               ]} />
             </div>
             <div>
-              <Text className="mb-2">
+              <Text variant='body' className="mb-2">
                 Mentored a team of students on their Software Engineering Project
                 <span className="text-accent-quaternary select-text">:</span>
               </Text>
@@ -47,7 +47,7 @@ export default function Experience() {
             <Text variant="date">Sep 2020 - May 2022</Text>
           </div>
           <Text variant="highlight" className="mb-3">Rushfields Plant Centre Ltd</Text>
-          <Text className="mb-2">
+          <Text variant="body" className="mb-2">
             Served customers at a local garden centre’s farm shop
             <span className="text-accent-quaternary select-text">:</span>
           </Text>
@@ -63,7 +63,7 @@ export default function Experience() {
             <Text variant="date">Jul 2019</Text>
           </div>
           <Text variant="highlight" className="mb-3">MakeReal Ltd</Text>
-          <Text className="mb-2">
+          <Text variant="body" className="mb-2">
             Immersed myself in the workings of a small VR company
             <span className="text-accent-quaternary select-text">:</span>
           </Text>

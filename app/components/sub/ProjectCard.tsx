@@ -33,7 +33,7 @@ export default function ProjectCard(project: Project) {
                     <Subtitle variant="large">{project.title}</Subtitle>
                 </div>
 
-                <Text variant="muted">
+                <Text variant="body">
                     {project.description.slice(0, 200)}{project.description.length > 200 ? '...' : ''}
                 </Text>
 

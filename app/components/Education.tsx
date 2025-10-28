@@ -17,7 +17,7 @@ export default function Education() {
             <Text variant="date">2022 - 2026</Text>
           </div>
           <Text variant="highlight" className="mb-2">Computer Science (MEng)</Text>
-          <Text variant="muted" className="mb-4">First Class Honours (Expected)</Text>
+          <Text variant="small" className="mb-4">First Class Honours (Expected)</Text>
           <div className="space-y-2">
             <Text variant="ornament-alt" className="font-jetbrains-mono text-xs select-text">
               <span className="text-muted">~/modules</span> $ ls -l
@@ -25,26 +25,28 @@ export default function Education() {
             <TagContainer>
               <Tag variant='default'>Deep Learning</Tag>
               <Tag variant='default'>Computer Vision</Tag>
+              <Tag variant='default'>Computer Graphics</Tag>
               <Tag variant='default'>Computer Architecture</Tag>
-              <Tag variant='default'>Cognitive AI</Tag>
+              <Tag variant='default'>Programming Languages</Tag>
+              <Tag variant='default'>Algorithms</Tag>
             </TagContainer>
           </div>
         </Card>
-        <Card>
+        <Card className="h-full flex flex-col">
           <div className="flex justify-between items-start mb-2">
             <Subtitle>Brighton, Hove & Sussex Sixth-Form College</Subtitle>
             <Text variant="date">2020 - 2022</Text>
           </div>
-          <Text variant="highlight" className="mb-2">Mathematics (A*) - Further Maths (A*) - Computer Science (A*) - Physics (A)</Text>
-          <Text variant="muted">A-Levels</Text>
+          <Text variant="highlight" className="mb-2">Mathematics A* - Further Maths A* - Computer Science A* - Physics A</Text>
+          <Text variant="small" className="mt-auto">A-Levels</Text>
         </Card>
-        <Card>
+        <Card className="h-full flex flex-col">
           <div className="flex justify-between items-start mb-2">
             <Subtitle>Downlands Community School</Subtitle>
             <Text variant="date">2015 - 2020</Text>
           </div>
           <Text variant="highlight" className="mb-2">Including Maths, Further Maths, Computer Science</Text>
-          <Text variant="muted">GCSEs</Text>
+          <Text variant="small" className="mt-auto">GCSEs</Text>
         </Card>
       </div>
     </Section>

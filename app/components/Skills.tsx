@@ -36,6 +36,7 @@ export default function Skills() {
             <Tag>Unity</Tag>
             <Tag>PyTorch</Tag>
             <Tag>OpenCV</Tag>
+            <Tag>SDL</Tag>
             <Tag>Spring Boot</Tag>
             <Tag>MongoDB</Tag>
             <Tag>React</Tag>
