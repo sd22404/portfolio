@@ -37,28 +37,37 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <div className="relative min-h-screen flex flex-col">
             <Header />
             {slug === 'game-of-life' && <Background />}
-            <div className={`flex-1 grid grid-cols-1 ${hasMedia ? 'xl:grid-cols-2 xl:max-h-screen' : ''} gap-8 px-4`}>
-                <Section id="text" bgColour="transparent" className="pt-20 sm:pt-24">
-                    <SectionHeading number={project.ticker || project.title.slice(0, 3).toUpperCase()}>{project.title}</SectionHeading>
+            
+            <div className="flex-1 min-h-0 flex flex-col pt-20 sm:pt-24">
+                <Section 
+                    id="page" 
+                    bgColour="transparent" 
+                    className={`h-full min-h-0 ${hasMedia && 'grid grid-cols-1 xl:grid-cols-2 xl:divide-x divide-border items-stretch'}`}
+                >
+                    <div className={`${hasMedia ? 'xl:pr-12' : ''}`}>
+                        <SectionHeading number={project.ticker || project.title.slice(0, 3).toUpperCase()}>{project.title}</SectionHeading>
 
-                    <Text variant="muted" className="mb-6">{project.description}</Text>
-                    <BulletList items={project.content || []} className="mb-6" />
+                        <Text variant="body" className="mb-6">{project.description}</Text>
+                        <BulletList items={project.content || []} className="mb-6" />
 
-                    {project.tags?.length &&
-                        <TagContainer className="mb-8">
-                            {project.tags.map((t: string) => (
-                                <Tag key={t} variant="highlight">{t}</Tag>
-                            ))}
-                        </TagContainer>
-                    }
-                    <Link href="/#projects" variant="underline" className="mt-8">← Back to home</Link>
+                        {project.tags?.length &&
+                            <TagContainer className="mb-8">
+                                {project.tags.map((t: string) => (
+                                    <Tag key={t} variant="highlight">{t}</Tag>
+                                ))}
+                            </TagContainer>
+                        }
+                        <Link href="/#projects" variant="underline" className="mt-8">← Back to home</Link>
+                    </div>
+                    
+                    {hasMedia && (
+                        <div className="h-full min-h-0 flex xl:pl-12 mt-20 xl:mt-0">
+                            <MediaCarousel items={project.media} className="w-full h-full flex-1" />
+                        </div>
+                    )}
                 </Section>
-                {hasMedia ? (
-                    <Section id="media" bgColour="transparent" className="xl:max-h-[calc(100vh-(61px+121px))]">
-                        <MediaCarousel items={project.media} className="w-full h-full" />
-                    </Section>
-                ) : null}
             </div>
+            
             <Footer />
         </div>
     );

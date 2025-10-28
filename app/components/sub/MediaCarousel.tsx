@@ -29,7 +29,7 @@ export default function MediaCarousel({ items = [] as MediaItem[], className = "
   if (!slides.length) return null;
 
   return (
-    <Card className={`p-0 ${className}`}>
+    <div className={`p-0 ${className}`}>
       <div
         className="relative w-full h-full mx-auto overflow-hidden"
         role="region"
@@ -79,7 +79,7 @@ export default function MediaCarousel({ items = [] as MediaItem[], className = "
         ))}
       </div>
       </div>
-    </Card>
+    </div>
   );
 }
 
@@ -102,7 +102,7 @@ function Slide({ item }: { item: MediaItem }) {
           controls
           preload="metadata"
           playsInline
-          className="block h-full w-full object-contain bg-black rounded-md"
+          className="block object-contain bg-black rounded-md"
         />
       );
     default:
