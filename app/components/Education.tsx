@@ -6,9 +6,9 @@ import Text from './ui/Text';
 import Subtitle from './ui/Subtitle';
 import TagContainer from './ui/TagContainer';
 
-export default function Education() {
+export default function Education({bg}: {bg?: string}) {
   return (
-    <Section id="education" bgColour='background-lighter'>
+    <Section id="education" bgClass={bg}>
       <SectionHeading number="01">Education</SectionHeading>
       <div className="grid lg:grid-cols-2 gap-6">
         <Card variant="raised" className="lg:col-span-2">

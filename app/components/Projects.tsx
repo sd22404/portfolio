@@ -62,9 +62,9 @@ export const projects: Project[] = [
   },
 ];
 
-export default function Projects() {
+export default function Projects({bg}: {bg?: string}) {
   return (
-    <Section id="projects">
+    <Section id="projects" bgClass={bg}>
       <SectionHeading number="03">Featured Projects</SectionHeading>
       <div className="grid lg:grid-cols-2 3xl:grid-cols-3 gap-6">
         {projects.map((project) => (

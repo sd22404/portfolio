@@ -4,9 +4,9 @@ import Card from './ui/Card';
 import Link from './ui/Link';
 import Text from './ui/Text';
 
-export default function Contact() {
+export default function Contact({bg}: {bg?: string}) {
     return (
-        <Section id="contact">
+        <Section id="contact" bgClass={bg}>
             <SectionHeading number="06">Get In Touch</SectionHeading>
             <Card variant="glow" className="max-w-2xl mx-auto text-center space-y-6">
                 <Text variant="medium">

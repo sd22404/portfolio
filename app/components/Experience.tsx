@@ -5,9 +5,9 @@ import Text from './ui/Text';
 import BulletList from './ui/BulletList';
 import Subtitle from './ui/Subtitle';
 
-export default function Experience() {
+export default function Experience({bg}: {bg?: string}) {
   return (
-    <Section id="experience" bgColour='background-lighter'>
+    <Section id="experience" bgClass={bg}>
       <SectionHeading number="02">Work Experience</SectionHeading>
       <div className="grid lg:grid-cols-2 gap-6">
         <Card variant="raised" className="lg:col-span-2">

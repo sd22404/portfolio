@@ -41,7 +41,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <div className="flex-1 min-h-0 flex flex-col pt-20 sm:pt-24">
                 <Section 
                     id="page" 
-                    bgColour="transparent" 
+                    bgClass="bg-transparent" 
                     className={`h-full min-h-0 ${hasMedia && 'grid grid-cols-1 xl:grid-cols-2 xl:divide-x divide-border items-stretch'}`}
                 >
                     <div className={`${hasMedia ? 'xl:pr-12' : ''}`}>

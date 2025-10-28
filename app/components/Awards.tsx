@@ -2,9 +2,9 @@ import SectionHeading from './ui/SectionHeading';
 import Section from './ui/Section';
 import Award from './sub/Award';
 
-export default function Awards() {
+export default function Awards({bg}: {bg?: string}) {
     return (
-        <Section id="awards" bgColour='background-lighter'>
+        <Section id="awards" bgClass={bg}>
             <SectionHeading number="05">Awards & Recognition</SectionHeading>
             <div className="grid md:grid-cols-2 2xl:grid-cols-3 gap-6">
                 {/** Star icon */}

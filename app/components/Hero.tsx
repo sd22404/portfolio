@@ -2,9 +2,9 @@ import Button from './ui/Button';
 import Section from './ui/Section';
 import TerminalBlock from './ui/TerminalBlock';
 
-export default function Hero() {
+export default function Hero({bg}: {bg?: string}) {
   return (
-    <Section id="hero" className="py-20 md:py-32">
+    <Section id="hero" bgClass={bg} className="py-20 md:py-32">
       <div className="space-y-12">
         <div>
           <TerminalBlock variant="prompt">whoami</TerminalBlock>
