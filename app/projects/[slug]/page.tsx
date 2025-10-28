@@ -38,11 +38,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <Header />
             {slug === 'game-of-life' && <Background />}
             
-            <div className="flex-1 min-h-0 flex flex-col pt-20 sm:pt-24">
+            <div className="flex-1 min-h-0 flex flex-col pt-12 sm:pt-24">
                 <Section 
                     id="page" 
                     bgClass="bg-transparent" 
-                    className={`h-full min-h-0 ${hasMedia && 'grid grid-cols-1 xl:grid-cols-2 xl:divide-x divide-border items-stretch'}`}
+                    className={`h-full min-h-0 ${hasMedia && 'grid grid-cols-1 xl:grid-cols-2 xl:divide-x xl:divide-border xl:items-stretch'}`}
                 >
                     <div className={`${hasMedia ? 'xl:pr-12' : ''}`}>
                         <SectionHeading number={project.ticker || project.title.slice(0, 3).toUpperCase()}>{project.title}</SectionHeading>
@@ -61,8 +61,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                     </div>
                     
                     {hasMedia && (
-                        <div className="h-full min-h-0 flex xl:pl-12 mt-20 xl:mt-0">
-                            <MediaCarousel items={project.media} className="w-full h-full flex-1" />
+                        <div className="min-h-0 flex xl:pl-12 mt-4 xl:mt-0 xl:h-full">
+                            <MediaCarousel items={project.media} className="relative overflow-hidden w-full flex-1 xl:h-full" />
                         </div>
                     )}
                 </Section>

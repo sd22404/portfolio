@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
+import Link from './Link';
 
 interface ButtonProps {
   href?: string;
-  target?: string;
-  rel?: string;
+  external?: boolean;
   onClick?: () => void;
   variant?: 'primary' | 'secondary' | 'ghost' | 'glow';
   children: ReactNode;
@@ -12,8 +12,7 @@ interface ButtonProps {
 
 export default function Button({ 
   href, 
-  target, 
-  rel, 
+  external,
   onClick, 
   variant = 'primary', 
   children, 
@@ -42,9 +41,9 @@ export default function Button({
   if (href) {
     return (
       (href ? (
-      <a href={href} className={classes} target={target} rel={rel}>
+      <Link href={href} variant='button' className={classes} external={external}>
         {children}
-      </a>
+      </Link>
       ) : (
       <button className={classes} onClick={onClick}>
         {children}

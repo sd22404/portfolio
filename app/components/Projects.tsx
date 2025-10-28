@@ -19,6 +19,7 @@ export const projects: Project[] = [
         { type: 'image', src: "/portfolio/projects/shifting-sands/concept-art.png", alt: "Concept Art" },
         { type: 'video', src: "/portfolio/projects/shifting-sands/trailer.mp4" }
     ],
+    source: "https://github.com/lm22433/2024-SealTeam7",
     coverImage: "hero-background.png",
     tags: ["C#", "Unity", "OpenCV", "Azure Kinect SDK"],
   },
@@ -33,6 +34,7 @@ export const projects: Project[] = [
       `Implemented ray-traced flat, Gouraud and Phong shading models, shadows, area lights, normal maps, and mirrors.`,
       `Made use of the OpenMP library to quickly parallelise ray-trace functions and speed up rendering.`,
     ],
+    source: "https://github.com/sd22404/COMS30020",
     tags: ["C++", "SDL2", "OpenMP"],
   },
   {

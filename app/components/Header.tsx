@@ -15,7 +15,7 @@ export default function Header({ links = [] as LinkItem[] }) {
                     <Link
                         variant="underline"
                         href="/#"
-                        className="h-15 inline-flex items-center font-mono text-xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent text-nowrap transition-all duration-300 hover:scale-105"
+                        className="py-4 inline-flex items-center font-mono text-xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent text-nowrap transition-all duration-300 hover:scale-105"
                     >
                         &lt;portfolio&gt;
                     </Link>
@@ -27,7 +27,7 @@ export default function Header({ links = [] as LinkItem[] }) {
                                     key={link.href}
                                     href={link.href}
                                     variant={link.variant}
-                                    className="transition-all duration-200 hover:-translate-y-0.5 flex items-center gap-1 h-15"
+                                    className="transition-all duration-200 hover:-translate-y-0.5 flex items-center gap-1 py-4"
                                 >
                                     <Text variant="ornament">
                                         [{String(index + 1).padStart(2, '0')}]

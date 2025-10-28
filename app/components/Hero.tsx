@@ -26,7 +26,7 @@ export default function Hero({bg}: {bg?: string}) {
         <div>
           <Links variant='button' className="py-4 flex gap-2" />
           <div className="flex flex-wrap gap-4">
-            <Button href="/portfolio/CV.pdf" variant="glow" target="_blank" rel="noopener noreferrer">
+            <Button href="/portfolio/CV.pdf" variant="glow" external>
               Download CV
             </Button>
             <Button href="#projects" variant="secondary">

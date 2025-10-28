@@ -6,6 +6,7 @@ import Tag from '../ui/Tag';
 import Link from '../ui/Link';
 import Text from '../ui/Text';
 import Image from 'next/image';
+import { githubIcon } from '../ui/Icons';
 
 export type MediaItem = {
     type: 'image' | 'video';
@@ -21,6 +22,7 @@ export type Project = {
     content?: string[];
     media?: MediaItem[];
     coverImage?: string;
+    source?: string;
     tags?: string[];
 };
 
@@ -59,9 +61,15 @@ export default function ProjectCard(project: Project) {
                     </TagContainer>
                 }
 
-                <div className="pt-2">
-                    <Link href={`/projects/${project.slug}`} variant="underline" className="inline-flex items-center gap-1 group/link">
-                        [View project]
+                <div className="flex pt-2">
+                    {project.source &&
+                        <Link href={project.source} external variant='underline' className="inline-flex items-center gap-2 group/link">
+                            {githubIcon}
+                            [View Source]
+                        </Link>
+                    }
+                    <Link href={`/projects/${project.slug}`} variant="underline" className="ml-auto inline-flex items-center gap-1 group/link">
+                        [More Details]
                         <span className="transition-transform duration-200 group-hover/link:translate-x-1">→</span>
                     </Link>
                 </div>
