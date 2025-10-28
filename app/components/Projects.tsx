@@ -48,7 +48,7 @@ export const projects: Project[] = [
       `Employed Spring Boot to quickly get a Java backend with MongoDB up and running.`,
       `Leveraged React (TypeScript) with Google’s Material Design components for a professional-looking frontend.`
     ],
-    tags: ["React", "TypeScript", "Spring Boot", "MongoDB", "Docker"],
+    tags: ["React", "TypeScript", "Spring Boot", "Java", "MongoDB", "Docker"],
   },
   {
     slug: "game-of-life",
@@ -62,6 +62,22 @@ export const projects: Project[] = [
     ],
     tags: ["Go", "SDL2", "AWS"],
   },
+  {
+    slug: "portfolio-website",
+    ticker: "WEB",
+    title: "Portfolio Website",
+    description: "This very website, built with Next.js! Built to showcase my other projects and experience.",
+    source: "https://github.com/sd22404/portfolio",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "CI/CD"],
+  },
+  {
+    slug: "valorant-tracker",
+    ticker: "VAL",
+    title: "Valorant Tracker",
+    description: "A desktop app to provide easy access to in-game information like current store, current match, and match history.",
+    source: "https://github.com/lm22433/valorant-store-tracker",
+    tags: ["Tauri", "Rust", "React", "TypeScript", "REST APIs"],
+  }
 ];
 
 export default function Projects({bg}: {bg?: string}) {

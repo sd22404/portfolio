@@ -10,7 +10,7 @@ export default function Skills({bg}: {bg?: string}) {
   return (
     <Section id="skills" bgClass={bg}>
       <SectionHeading number="04">Skills & Technologies</SectionHeading>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid sm:grid-cols-2 2xl:grid-cols-4 gap-6">
         <Card variant="glow">
           <div className="flex items-center gap-2 mb-4">
             <Text variant="ornament-alt">$</Text>
@@ -24,22 +24,35 @@ export default function Skills({bg}: {bg?: string}) {
             <Tag>Java</Tag>
             <Tag>C++</Tag>
             <Tag>C#</Tag>
+            <Tag>Rust</Tag>
+          </TagContainer>
+        </Card>
+
+        <Card variant="glow">
+          <div className="flex items-center gap-2 mb-4">
+            <Text variant="ornament-alt">🧠</Text>
+            <Subtitle variant="medium">Graphics & AI</Subtitle>
+          </div>
+          <TagContainer>
+            <Tag>Unity</Tag>
+            <Tag>SDL</Tag>
+            <Tag>OpenCV</Tag>
+            <Tag>PyTorch</Tag>
+            <Tag>TensorFlow</Tag>
           </TagContainer>
         </Card>
 
         <Card variant="glow">
           <div className="flex items-center gap-2 mb-4">
             <Text variant="ornament-alt">⚡</Text>
-            <Subtitle variant="medium">Frameworks & Libs</Subtitle>
+            <Subtitle variant="medium">Web & App Frameworks</Subtitle>
           </div>
           <TagContainer>
-            <Tag>Unity</Tag>
-            <Tag>PyTorch</Tag>
-            <Tag>OpenCV</Tag>
-            <Tag>SDL</Tag>
             <Tag>Spring Boot</Tag>
-            <Tag>MongoDB</Tag>
+            <Tag>Tauri</Tag>
             <Tag>React</Tag>
+            <Tag>Next.js</Tag>
+            <Tag>Tailwind CSS</Tag>
           </TagContainer>
         </Card>
 
@@ -49,6 +62,7 @@ export default function Skills({bg}: {bg?: string}) {
             <Subtitle variant="medium">Tools & Cloud</Subtitle>
           </div>
           <TagContainer>
+            <Tag>MongoDB</Tag>
             <Tag>Docker</Tag>
             <Tag>AWS</Tag>
             <Tag>Git</Tag>
