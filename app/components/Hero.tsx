@@ -1,3 +1,4 @@
+import Links from './sub/Links';
 import Button from './ui/Button';
 import Section from './ui/Section';
 import TerminalBlock from './ui/TerminalBlock';
@@ -22,16 +23,14 @@ export default function Hero({bg}: {bg?: string}) {
           </TerminalBlock>
         </div>
 
-        <div className="flex flex-wrap gap-4 pt-4">
-          <Button href="/portfolio/CV.pdf" variant="glow" target="_blank" rel="noopener noreferrer">
-            Download CV
-          </Button>
-          <div className="flex gap-4">
+        <div>
+          <Links variant='button' className="py-4 flex gap-2" />
+          <div className="flex flex-wrap gap-4">
+            <Button href="/portfolio/CV.pdf" variant="glow" target="_blank" rel="noopener noreferrer">
+              Download CV
+            </Button>
             <Button href="#projects" variant="secondary">
               View work
-            </Button>
-            <Button href="#contact" variant="secondary">
-              Contact Me
             </Button>
           </div>
         </div>

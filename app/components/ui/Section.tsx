@@ -10,7 +10,7 @@ interface SectionProps {
 export default function Section({ id, children, bgClass = 'bg-background', className = '' }: SectionProps) {
   return (
     <div className={`w-screen ${bgClass}`}>
-      <section id={id} className={`max-w-5xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 pt-6 sm:pt-8 pb-20 sm:pb-24 scroll-mt-20 ${className}`}>
+      <section id={id} className={`max-w-5xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8 scroll-mt-20 ${className}`}>
         {children}
       </section>
     </div>

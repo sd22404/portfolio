@@ -1,5 +1,6 @@
 import Text from './ui/Text';
 import TerminalBlock from './ui/TerminalBlock';
+import Links from './sub/Links';
 
 export default function Footer() {
   return (
@@ -12,10 +13,12 @@ export default function Footer() {
               Built with Next.js & Tailwind CSS | © 2025 Finn Cooper
             </TerminalBlock>
           </div>
+
+          <Links className="flex gap-1 flex-col justify-center items-end" />
           
-          <Text variant="highlight" className="ml-auto">
+          {/* <Text variant="highlight" className="ml-auto">
             &lt;/portfolio&gt;
-          </Text>
+          </Text> */}
         </div>
       </div>
     </footer>

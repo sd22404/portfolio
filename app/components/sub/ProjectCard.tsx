@@ -38,15 +38,17 @@ export default function ProjectCard(project: Project) {
                 </Text>
 
                 {project.coverImage &&
-                    <div className="group/img mb-4 rounded-md overflow-hidden relative w-full h-[clamp(10rem,30vh,18rem)] transition-all duration-300">
-                        <Image
-                            src={`/portfolio/projects/${project.slug}/${project.coverImage}`}
-                            alt={`${project.title} Cover Image`}
-                            fill
-                            className="object-cover transition-transform duration-300 group-hover/img:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300" />
-                    </div>
+                    <Link href={`/projects/${project.slug}`} variant="text" className="block" aria-label={`View project`}>
+                        <div className="group/img mb-4 rounded-md overflow-hidden relative w-full h-[clamp(10rem,30vh,18rem)] transition-all duration-300">
+                            <Image
+                                src={`/portfolio/projects/${project.slug}/${project.coverImage}`}
+                                alt={`${project.title} Cover Image`}
+                                fill
+                                className="object-cover transition-transform duration-300 group-hover/img:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300" />
+                        </div>
+                    </Link>
                 }
 
                 {project.tags?.length &&

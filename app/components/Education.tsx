@@ -16,8 +16,8 @@ export default function Education({bg}: {bg?: string}) {
             <Subtitle>University of Bristol</Subtitle>
             <Text variant="date">2022 - 2026</Text>
           </div>
-          <Text variant="highlight" className="mb-2">Computer Science (MEng)</Text>
-          <Text variant="small" className="mb-4">First Class Honours (Expected)</Text>
+          <Text variant="highlight" className="mb-2">Computer Science</Text>
+          <Text variant="small" className="mb-4">Master of Engineering - First Class Honours (Expected)</Text>
           <div className="space-y-2">
             <Text variant="ornament-alt" className="font-jetbrains-mono text-xs select-text">
               <span className="text-muted">~/modules</span> $ ls -l
@@ -34,19 +34,19 @@ export default function Education({bg}: {bg?: string}) {
         </Card>
         <Card className="h-full flex flex-col">
           <div className="flex justify-between items-start mb-2">
-            <Subtitle>Brighton, Hove & Sussex Sixth-Form College</Subtitle>
+            <Subtitle>BHASVIC</Subtitle>
             <Text variant="date">2020 - 2022</Text>
           </div>
-          <Text variant="highlight" className="mb-2">Mathematics A* - Further Maths A* - Computer Science A* - Physics A</Text>
-          <Text variant="small" className="mt-auto">A-Levels</Text>
+          <Text variant="highlight" className="mb-2">Maths, Further Maths, Computer Science, Physics</Text>
+          <Text variant="small" className="mt-auto">A-Levels - A* A* A* A</Text>
         </Card>
         <Card className="h-full flex flex-col">
           <div className="flex justify-between items-start mb-2">
             <Subtitle>Downlands Community School</Subtitle>
             <Text variant="date">2015 - 2020</Text>
           </div>
-          <Text variant="highlight" className="mb-2">Including Maths, Further Maths, Computer Science</Text>
-          <Text variant="small" className="mt-auto">GCSEs</Text>
+          <Text variant="highlight" className="mb-2">Including: Further Maths, Computer Science, Music, German</Text>
+          <Text variant="small" className="mt-auto whitespace-pre">GCSEs - 10x Level 9  1x Level 8</Text>
         </Card>
       </div>
     </Section>
