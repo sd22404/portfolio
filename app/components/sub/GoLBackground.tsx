@@ -27,7 +27,7 @@ export default function Background() {
         const FADE_OUT_MS = 3000;
         let start = performance.now();
         let last = performance.now();
-        let stopped = false;
+        let stopped = true;
         let raf = 0;
         const FPS = 10;
         let interval = 1000 / FPS;
