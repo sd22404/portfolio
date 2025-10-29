@@ -84,13 +84,7 @@ export default function Background() {
             context.setTransform(dpr, 0, 0, dpr, 0, 0);
             createGrid(width, height);
 
-            // reset animation
-            if (raf > 0) cancelAnimationFrame(raf);
-            start = performance.now();
-            last = performance.now();
-            interval = 1000 / FPS;
-            stopped = false;
-            raf = requestAnimationFrame(loop);
+            startLoop();
         }
 
         function index(x: number, y: number) {
@@ -152,6 +146,17 @@ export default function Background() {
             raf = 0;
         }
 
+        function startLoop() {
+            // reset animation
+            if (!stopped) return;
+            start = performance.now();
+            last = performance.now();
+            interval = 1000 / FPS;
+            stopped = false;
+            if (raf > 0) cancelAnimationFrame(raf);
+            raf = requestAnimationFrame(loop);
+        }
+
         function loop(now: number) {
             raf = requestAnimationFrame(loop);
 
@@ -181,6 +186,8 @@ export default function Background() {
         const onVisibility = () => {
             if (document.hidden) {
                 stopLoop();
+            } else if(!document.hidden) {
+                startLoop();
             }
         };
         document.addEventListener("visibilitychange", onVisibility);

@@ -13,13 +13,13 @@ export default function Header({ links = [] as LinkItem[] }) {
             <div className="max-w-5xl 2xl:max-w-7xl mx-auto px-6">
                 <nav className="flex items-center justify-between">
                     <Link
-                        variant="underline"
+                        variant="button"
                         href="/#"
-                        className="py-4 gap-1 inline-flex items-center font-mono text-xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent text-nowrap transition-all duration-300 hover:scale-105"
+                        className="py-3 gap-1 inline-flex items-center hover:scale-105"
                     >
-                        <Text variant="ornament">[</Text>
-                        <span>Finn Cooper</span>
-                        <Text variant="ornament">]</Text>
+                        <Text variant="ornament" className='text-xl!'>[</Text>
+                        <span className="font-bold text-3xl bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent text-nowrap">Finn Cooper</span>
+                        <Text variant="ornament" className='text-xl!'>]</Text>
                     </Link>
 
                     <div className="ml-6 flex flex-1 overflow-x-auto min-w-0 scroll-smooth hide-scrollbar">

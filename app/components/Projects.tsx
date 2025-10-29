@@ -66,7 +66,7 @@ export const projects: Project[] = [
     slug: "portfolio-website",
     ticker: "WEB",
     title: "Portfolio Website",
-    description: "This very website, built with Next.js! Built to showcase my other projects and experience.",
+    description: "This very website, built with Next.js! Showcases my other projects and experience.",
     source: "https://github.com/sd22404/portfolio",
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "CI/CD"],
   },
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     slug: "valorant-tracker",
     ticker: "VAL",
     title: "Valorant Tracker",
-    description: "A desktop app to provide easy access to in-game information like current store, current match, and match history.",
+    description: "A WIP desktop app to provide easy access to in-game information like current store, current match, and match history.",
     source: "https://github.com/lm22433/valorant-store-tracker",
     tags: ["Tauri", "Rust", "React", "TypeScript", "REST APIs"],
   }
