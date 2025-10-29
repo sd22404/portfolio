@@ -57,7 +57,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                                 ))}
                             </TagContainer>
                         }
-                        <Link href="/#projects" variant="underline" className="mt-8">← Back to home</Link>
+
+                        <Link href="/#projects" variant="underline" className="mt-8 inline-flex items-center gap-1 group/link">
+                            <Text variant="ornament" className="transition-transform duration-200 group-hover/link:-translate-x-1">←</Text>
+                            <span className='inline-flex'><Text variant='ornament'>[</Text>Back to home<Text variant='ornament'>]</Text></span>
+                        </Link>
                     </div>
                     
                     {hasMedia && (

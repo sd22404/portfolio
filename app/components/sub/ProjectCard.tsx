@@ -64,13 +64,13 @@ export default function ProjectCard(project: Project) {
                 <div className="flex pt-2">
                     {project.source &&
                         <Link href={project.source} external variant='underline' className="inline-flex items-center gap-2 group/link">
-                            {githubIcon}
-                            [View Source]
+                            <span className="text-accent-quaternary">{githubIcon}</span>
+                            <span className='inline-flex'><Text variant='ornament'>[</Text>View Source<Text variant='ornament'>]</Text></span>
                         </Link>
                     }
                     <Link href={`/projects/${project.slug}`} variant="underline" className="ml-auto inline-flex items-center gap-1 group/link">
-                        [More Details]
-                        <span className="transition-transform duration-200 group-hover/link:translate-x-1">→</span>
+                        <span className='inline-flex'><Text variant='ornament'>[</Text>More Details<Text variant='ornament'>]</Text></span>
+                        <Text variant="ornament" className="transition-transform duration-200 group-hover/link:translate-x-1">→</Text>
                     </Link>
                 </div>
             </div>

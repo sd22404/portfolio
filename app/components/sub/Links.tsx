@@ -9,28 +9,28 @@ export default function Links({className = '', variant = 'text'}: {className?: s
         variant === 'text' ? (
             <div className={className}>
                 <Link href="mailto:finlay.j.cooper137@gmail.com" external variant="text" className="flex items-center gap-1">
-                    <Text variant='ornament-alt'>[em]</Text>
-                    Email
+                    <span className="text-accent-quaternary">{emailIcon}</span>
+                    <span className="inline-flex"><Text variant='ornament'>[</Text>Email<Text variant='ornament'>]</Text></span>
                 </Link>
                 <Link href="https://github.com/sd22404" external variant="text" className="flex items-center gap-1">
-                    <Text variant='ornament-alt'>[git]</Text>
-                    GitHub
+                    <span className="text-accent-quaternary">{githubIcon}</span>
+                    <span className="inline-flex"><Text variant='ornament'>[</Text>GitHub<Text variant='ornament'>]</Text></span>
                 </Link>
                 <Link href="https://linkedin.com/in/finlay-cooper" external variant="text" className="flex items-center gap-1">
-                    <Text variant='ornament-alt'>[in]</Text>
-                    LinkedIn
+                    <span className="text-accent-quaternary">{linkedinIcon}</span>
+                    <span className="inline-flex"><Text variant='ornament'>[</Text>LinkedIn<Text variant='ornament'>]</Text></span>
                 </Link>
             </div>
         ) : (
             <div className={className}>
                 <Button href="https://linkedin.com/in/finlay-cooper" external variant="ghost">
-                    {linkedinIcon}
+                    <span className="text-accent-quaternary">{linkedinIcon}</span>
                 </Button>
                 <Button href="https://github.com/sd22404" external variant="ghost">
-                    {githubIcon}
+                    <span className="text-accent-quaternary">{githubIcon}</span>
                 </Button>
                 <Button href="mailto:finlay.j.cooper137@gmail.com" external variant="ghost">
-                    {emailIcon}
+                    <span className="text-accent-quaternary">{emailIcon}</span>
                 </Button>
             </div>
         )

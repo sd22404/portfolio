@@ -4,7 +4,7 @@ import Text from './ui/Text';
 export type LinkItem = {
     href: string;
     label: string;
-    variant?: 'text' | 'text-alt' | 'underline';
+    variant?: 'text' | 'underline' | 'button';
 }
 
 export default function Header({ links = [] as LinkItem[] }) {
@@ -15,9 +15,11 @@ export default function Header({ links = [] as LinkItem[] }) {
                     <Link
                         variant="underline"
                         href="/#"
-                        className="py-4 inline-flex items-center font-mono text-xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent text-nowrap transition-all duration-300 hover:scale-105"
+                        className="py-4 gap-1 inline-flex items-center font-mono text-xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent text-nowrap transition-all duration-300 hover:scale-105"
                     >
-                        &lt;portfolio&gt;
+                        <Text variant="ornament">[</Text>
+                        <span>Finn Cooper</span>
+                        <Text variant="ornament">]</Text>
                     </Link>
 
                     <div className="ml-6 flex flex-1 overflow-x-auto min-w-0 scroll-smooth hide-scrollbar">

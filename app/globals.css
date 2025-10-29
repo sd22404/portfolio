@@ -63,11 +63,11 @@ html {
   --background-selection: #45475a;  /* surface1 for selection */
   --foreground: #cdd6f4;            /* text */
 
-  --accent: #89b4fa;                /* blue as primary accent */
+  --accent: var(--color-blue);
   --accent-secondary: var(--color-purple);
   --accent-tertiary: var(--color-green);
   --accent-quaternary: var(--color-orange);
-  --foreground-darker: #bac2de;    /* subtext1 */
+  --foreground-darker: #bac2de;     /* subtext1 */
   --muted: #9399b2;                 /* overlay2 */
   --border: #45475a;                /* surface1 */
 
