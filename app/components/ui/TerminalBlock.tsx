@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { ChevronRight } from './Icons';
 
 interface TerminalBlockProps {
   children: ReactNode;
@@ -21,7 +22,11 @@ export default function TerminalBlock({
 
   const prefix = {
     prompt: <span className="select-none">$ </span>,
-    output: <span className="text-muted select-none">› </span>,
+    output: (
+      <span className="text-muted select-none inline-flex w-[2ch] align-middle">
+        <ChevronRight />
+      </span>
+    ),
     code: null
   };
 

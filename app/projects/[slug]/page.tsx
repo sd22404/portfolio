@@ -58,14 +58,14 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                             </TagContainer>
                         }
 
-                        <Link href="/#projects" variant="underline" className="mt-8 inline-flex items-center gap-1 group/link">
+                        <Link href="/#projects" variant="underline" className="inline-flex items-center gap-1 group/link">
                             <Text variant="ornament" className="transition-transform duration-200 group-hover/link:-translate-x-1">←</Text>
                             <span className='inline-flex'><Text variant='ornament'>[</Text>Back to home<Text variant='ornament'>]</Text></span>
                         </Link>
                     </div>
                     
                     {hasMedia && (
-                        <div className="min-h-0 flex xl:pl-12 mt-4 xl:mt-0 xl:h-full">
+                        <div className="min-h-0 flex xl:pl-12 my-12 xl:my-0 xl:h-full">
                             <MediaCarousel items={project.media} className="relative overflow-hidden w-full flex-1 xl:h-full" />
                         </div>
                     )}

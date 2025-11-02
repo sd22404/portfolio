@@ -51,14 +51,14 @@ export default function MediaCarousel({ items = [] as MediaItem[], className = "
       <button
         aria-label="Previous"
         onClick={prev}
-        className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full border border-border bg-background/70 px-2 py-1 text-foreground hover:bg-background"
+        className="hover:cursor-pointer absolute left-2 bottom-2 rounded border border-border/80 bg-accent-tertiary/80 backdrop-blur-sm px-3 font-mono text-lg text-background hover:border-accent-tertiary hover:bg-background/80 hover:text-accent transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-secondary"
       >
         ‹
       </button>
       <button
         aria-label="Next"
         onClick={next}
-        className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full border border-border bg-background/70 px-2 py-1 text-foreground hover:bg-background"
+        className="hover:cursor-pointer absolute right-2 bottom-2 rounded border border-border/80 bg-accent-tertiary/80 backdrop-blur-sm px-3 font-mono text-lg text-background hover:border-accent-tertiary hover:bg-background/80 hover:text-accent transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-secondary"
       >
         ›
       </button>
@@ -71,8 +71,10 @@ export default function MediaCarousel({ items = [] as MediaItem[], className = "
             aria-label={`Go to slide ${i + 1}`}
             onClick={() => setIndex(i)}
             className={
-              "h-2 w-2 rounded-full border border-border " +
-              (i === index ? "bg-accent" : "bg-background")
+              "h-2 w-2 rounded-xs border transition-all duration-200 hover:cursor-pointer " +
+              (i === index 
+                ? "bg-accent-tertiary border-accent-tertiary scale-125" 
+                : "bg-background border-border/50 hover:border-accent-tertiary hover:bg-accent-tertiary/20")
             }
           />
         ))}
@@ -97,12 +99,14 @@ function Slide({ item }: { item: MediaItem }) {
     case "video":
       return (
         <video
-          src={item.src}
           controls
           preload="metadata"
           playsInline
           className="block object-contain bg-black rounded-md"
-        />
+        >
+          <source src={item.src} type="video/mp4" />
+          Sorry, your browser doesn’t support embedded videos.
+        </video>
       );
     case "pdf":
       return (

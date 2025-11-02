@@ -6,7 +6,7 @@ import Tag from '../ui/Tag';
 import Link from '../ui/Link';
 import Text from '../ui/Text';
 import Image from 'next/image';
-import { LuGithub } from 'react-icons/lu';
+import { Github, ExternalLink, ChevronsRight } from '../ui/Icons';
 
 export type MediaItem = {
     type: 'image' | 'video' | 'pdf';
@@ -23,6 +23,7 @@ export type Project = {
     media?: MediaItem[];
     coverImage?: string;
     source?: string;
+    demo?: string;
     tags?: string[];
 };
 
@@ -30,8 +31,8 @@ export default function ProjectCard(project: Project) {
     return (
         <Card variant="raised">
             <div className="flex flex-col h-full space-y-4">
-                <div className="flex gap-2 items-center">
-                    <Text variant="ornament-alt">&gt;&gt;</Text>
+                <div className="flex gap-1 items-center">
+                    <Text variant="ornament-alt"><ChevronsRight size={24} /></Text>
                     <Subtitle variant="large">{project.title}</Subtitle>
                 </div>
 
@@ -65,8 +66,14 @@ export default function ProjectCard(project: Project) {
                     <div className="flex pt-2">
                         {project.source &&
                             <Link href={project.source} external variant='underline' className="inline-flex items-center gap-2 group/link">
-                                <span className="text-accent-quaternary"><LuGithub size={24}/></span>
+                                <span className="text-accent-quaternary"><Github size={20}/></span>
                                 <span className='inline-flex'><Text variant='ornament'>[</Text>View Source<Text variant='ornament'>]</Text></span>
+                            </Link>
+                        }
+                        {project.demo &&
+                            <Link href={project.demo} external variant='underline' className="inline-flex items-center gap-2 group/link">
+                                <span className="text-accent-quaternary"><ExternalLink size={20}/></span>
+                                <span className='inline-flex'><Text variant='ornament'>[</Text>View Demo<Text variant='ornament'>]</Text></span>
                             </Link>
                         }
                         <Link href={`/projects/${project.slug}`} variant="underline" className="ml-auto inline-flex items-center gap-1 group/link">

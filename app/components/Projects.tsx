@@ -59,6 +59,7 @@ export const projects: Project[] = [
       { type: 'image', src: "/portfolio/projects/livestock-management/calendar.png", alt: "Calendar View" }
     ],
     coverImage: "calendar.png",
+    demo: "https://cityfarm.murraygrov.es",
     tags: ["React", "TypeScript", "Spring Boot", "Java", "MongoDB", "Docker"],
   },
   {
@@ -94,6 +95,10 @@ export const projects: Project[] = [
     ticker: "VAL",
     title: "Valorant Tracker",
     description: "A WIP desktop app to provide easy access to in-game information like current store, current match, and match history.",
+    media: [
+      { type: 'image', src: "/portfolio/projects/valorant-tracker/homepage.png", alt: "Homepage Screenshot" }
+    ],
+    coverImage: "homepage.png",
     source: "https://github.com/lm22433/valorant-store-tracker",
     tags: ["Tauri", "Rust", "React", "TypeScript", "External API"],
   }

@@ -5,6 +5,7 @@ import Text from './ui/Text';
 import Tag from './ui/Tag';
 import Subtitle from './ui/Subtitle';
 import TagContainer from './ui/TagContainer';
+import { Code, Cog, Cpu, Zap } from './ui/Icons';
 
 export default function Skills({bg}: {bg?: string}) {
   return (
@@ -13,7 +14,7 @@ export default function Skills({bg}: {bg?: string}) {
       <div className="grid sm:grid-cols-2 2xl:grid-cols-4 gap-6">
         <Card variant="glow">
           <div className="flex items-center gap-2 mb-4">
-            <Text variant="ornament-alt">$</Text>
+            <Text variant="ornament-alt"><Code /></Text>
             <Subtitle variant="medium">Languages</Subtitle>
           </div>
           <TagContainer>
@@ -30,7 +31,7 @@ export default function Skills({bg}: {bg?: string}) {
 
         <Card variant="glow">
           <div className="flex items-center gap-2 mb-4">
-            <Text variant="ornament-alt">🧠</Text>
+            <Text variant="ornament-alt"><Cpu /></Text>
             <Subtitle variant="medium">Graphics & AI</Subtitle>
           </div>
           <TagContainer>
@@ -44,7 +45,7 @@ export default function Skills({bg}: {bg?: string}) {
 
         <Card variant="glow">
           <div className="flex items-center gap-2 mb-4">
-            <Text variant="ornament-alt">⚡</Text>
+            <Text variant="ornament-alt"><Zap /></Text>
             <Subtitle variant="medium">Web & App Frameworks</Subtitle>
           </div>
           <TagContainer>
@@ -58,7 +59,7 @@ export default function Skills({bg}: {bg?: string}) {
 
         <Card variant="glow">
           <div className="flex items-center gap-2 mb-4">
-            <Text variant="ornament-alt">⚙</Text>
+            <Text variant="ornament-alt"><Cog /></Text>
             <Subtitle variant="medium">Tools & Cloud</Subtitle>
           </div>
           <TagContainer>
