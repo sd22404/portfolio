@@ -6,10 +6,10 @@ import Tag from '../ui/Tag';
 import Link from '../ui/Link';
 import Text from '../ui/Text';
 import Image from 'next/image';
-import { githubIcon } from '../ui/Icons';
+import { LuGithub } from 'react-icons/lu';
 
 export type MediaItem = {
-    type: 'image' | 'video';
+    type: 'image' | 'video' | 'pdf';
     src: string;
     alt?: string;
 }
@@ -29,7 +29,7 @@ export type Project = {
 export default function ProjectCard(project: Project) {
     return (
         <Card variant="raised">
-            <div className="space-y-4">
+            <div className="flex flex-col h-full space-y-4">
                 <div className="flex gap-2 items-center">
                     <Text variant="ornament-alt">&gt;&gt;</Text>
                     <Subtitle variant="large">{project.title}</Subtitle>
@@ -39,39 +39,41 @@ export default function ProjectCard(project: Project) {
                     {project.description.slice(0, 200)}{project.description.length > 200 ? '...' : ''}
                 </Text>
 
-                {project.coverImage &&
-                    <Link href={`/projects/${project.slug}`} variant="text" className="block" aria-label={`View project`}>
-                        <div className="group/img mb-4 rounded-md overflow-hidden relative w-full h-[clamp(10rem,30vh,18rem)] transition-all duration-300">
-                            <Image
-                                src={`/portfolio/projects/${project.slug}/${project.coverImage}`}
-                                alt={`${project.title} Cover Image`}
-                                fill
-                                className="object-cover transition-transform duration-300 group-hover/img:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300" />
-                        </div>
-                    </Link>
-                }
-
-                {project.tags?.length &&
-                    <TagContainer>
-                        {project.tags?.map((tag) => (
-                            <Tag key={tag} variant="highlight">{tag}</Tag>
-                        ))}
-                    </TagContainer>
-                }
-
-                <div className="flex pt-2">
-                    {project.source &&
-                        <Link href={project.source} external variant='underline' className="inline-flex items-center gap-2 group/link">
-                            <span className="text-accent-quaternary">{githubIcon}</span>
-                            <span className='inline-flex'><Text variant='ornament'>[</Text>View Source<Text variant='ornament'>]</Text></span>
+                <div className="mt-auto space-y-4">
+                    {project.coverImage &&
+                        <Link href={`/projects/${project.slug}`} variant="text" className="block" aria-label={`View project`}>
+                            <div className="group/img rounded-md overflow-hidden relative w-full h-[clamp(10rem,30vh,18rem)] transition-all duration-300">
+                                <Image
+                                    src={`/portfolio/projects/${project.slug}/${project.coverImage}`}
+                                    alt={`${project.title} Cover Image`}
+                                    fill
+                                    className="object-cover transition-transform duration-300 group-hover/img:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300" />
+                            </div>
                         </Link>
                     }
-                    <Link href={`/projects/${project.slug}`} variant="underline" className="ml-auto inline-flex items-center gap-1 group/link">
-                        <span className='inline-flex'><Text variant='ornament'>[</Text>More Details<Text variant='ornament'>]</Text></span>
-                        <Text variant="ornament" className="transition-transform duration-200 group-hover/link:translate-x-1">→</Text>
-                    </Link>
+
+                    {project.tags?.length &&
+                        <TagContainer>
+                            {project.tags?.map((tag) => (
+                                <Tag key={tag} variant="highlight">{tag}</Tag>
+                            ))}
+                        </TagContainer>
+                    }
+
+                    <div className="flex pt-2">
+                        {project.source &&
+                            <Link href={project.source} external variant='underline' className="inline-flex items-center gap-2 group/link">
+                                <span className="text-accent-quaternary"><LuGithub size={24}/></span>
+                                <span className='inline-flex'><Text variant='ornament'>[</Text>View Source<Text variant='ornament'>]</Text></span>
+                            </Link>
+                        }
+                        <Link href={`/projects/${project.slug}`} variant="underline" className="ml-auto inline-flex items-center gap-1 group/link">
+                            <span className='inline-flex'><Text variant='ornament'>[</Text>More Details<Text variant='ornament'>]</Text></span>
+                            <Text variant="ornament" className="transition-transform duration-200 group-hover/link:translate-x-1">→</Text>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </Card>

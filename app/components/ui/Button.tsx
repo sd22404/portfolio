@@ -26,7 +26,7 @@ export default function Button({
       active:shadow-md active:brightness-100
       focus-visible:text-background`,
     secondary: `shadow-md border border-border bg-background-lighter/50
-      hover:border-accent-secondary hover:text-accent-secondary hover:bg-background-lighter hover:shadow-md hover:shadow-accent-secondary/20 hover:-translate-y-0.5
+      hover:border-accent hover:text-accent hover:bg-background-lighter hover:shadow-md hover:shadow-accent/20 hover:-translate-y-0.5
       active:translate-y-0`,
     ghost: `border border-transparent hover:border-border/50 hover:bg-background-lighter/80 hover:text-accent-secondary
       hover:shadow-sm transition-all`,

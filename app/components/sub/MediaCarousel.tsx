@@ -2,7 +2,6 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import type { MediaItem } from "./ProjectCard";
-import Card from "../ui/Card";
 
 export default function MediaCarousel({ items = [] as MediaItem[], className = "" }: { items?: MediaItem[], className?: string }) {
   const slides = useMemo(() => items.filter(Boolean), [items]);
@@ -89,7 +88,7 @@ function Slide({ item }: { item: MediaItem }) {
       return (
         <img
           src={item.src}
-          alt={item.alt ?? ""}
+          alt={item.alt ?? "Image"}
           loading="lazy"
           decoding="async"
           className="block h-full w-full object-contain rounded-md"
@@ -103,6 +102,14 @@ function Slide({ item }: { item: MediaItem }) {
           preload="metadata"
           playsInline
           className="block object-contain bg-black rounded-md"
+        />
+      );
+    case "pdf":
+      return (
+        <iframe
+          src={item.src + "#toolbar=0&navpanes=0&scrollbar=0"}
+          title={item.alt ?? "PDF Document"}
+          className="block w-full h-full border-0 rounded-md"
         />
       );
     default:

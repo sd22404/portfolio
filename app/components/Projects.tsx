@@ -17,14 +17,17 @@ export const projects: Project[] = [
     media: [
         { type: 'image', src: "/portfolio/projects/shifting-sands/hero-background.png", alt: "Leaderboard Background" },
         { type: 'image', src: "/portfolio/projects/shifting-sands/concept-art.png", alt: "Concept Art" },
-        { type: 'video', src: "/portfolio/projects/shifting-sands/trailer.mp4" }
+        { type: 'video', src: "/portfolio/projects/shifting-sands/trailer.mp4", alt: "Trailer" },
+        { type: 'video', src: "/portfolio/projects/shifting-sands/gameplay.mp4", alt: "Gameplay" },
+        { type: 'video', src: "/portfolio/projects/shifting-sands/technical.mp4", alt: "Technical Video" },
+        { type: 'pdf', src: "/portfolio/projects/shifting-sands/report.pdf", alt: "Report" }
     ],
     source: "https://github.com/lm22433/2024-SealTeam7",
     coverImage: "hero-background.png",
     tags: ["C#", "Unity", "OpenCV", "Azure Kinect SDK"],
   },
   {
-    slug: "cpp-rasteriser-raytracer",
+    slug: "rasteriser-raytracer",
     ticker: "RAY",
     title: "Interactive Ray-tracer",
     description: "Interactive C++ software rasteriser and ray-tracer from scratch.",
@@ -34,6 +37,10 @@ export const projects: Project[] = [
       `Implemented ray-traced flat, Gouraud and Phong shading models, shadows, area lights, normal maps, and mirrors.`,
       `Made use of the OpenMP library to quickly parallelise ray-trace functions and speed up rendering.`,
     ],
+    media: [
+      { type: 'image', src: "/portfolio/projects/rasteriser-raytracer/raytraced-scene-skybox.png", alt: "Ray-traced Scene" }
+    ],
+    coverImage: "raytraced-scene-skybox.png",
     source: "https://github.com/sd22404/COMS30020",
     tags: ["C++", "SDL2", "OpenMP"],
   },
@@ -48,6 +55,10 @@ export const projects: Project[] = [
       `Employed Spring Boot to quickly get a Java backend with MongoDB up and running.`,
       `Leveraged React (TypeScript) with Google’s Material Design components for a professional-looking frontend.`
     ],
+    media: [
+      { type: 'image', src: "/portfolio/projects/livestock-management/calendar.png", alt: "Calendar View" }
+    ],
+    coverImage: "calendar.png",
     tags: ["React", "TypeScript", "Spring Boot", "Java", "MongoDB", "Docker"],
   },
   {
@@ -60,6 +71,10 @@ export const projects: Project[] = [
       `Distributed the single-threaded system to four AWS workers, with a single broker node for task management.`,
       `Introduced a halo-exchange technique via RPCs to optimise Game of Life world division among workers.`,
     ],
+    media: [
+      { type: 'pdf', src: "/portfolio/projects/game-of-life/report.pdf", alt: "Report" }
+    ],
+    coverImage: "report-cover.png",
     tags: ["Go", "SDL2", "AWS"],
   },
   {
@@ -67,6 +82,10 @@ export const projects: Project[] = [
     ticker: "WEB",
     title: "Portfolio Website",
     description: "This very website, built with Next.js! Showcases my other projects and experience.",
+    media: [
+      { type: 'image', src: "/portfolio/projects/portfolio-website/homepage.png", alt: "Homepage Screenshot" }
+    ],
+    coverImage: "homepage.png",
     source: "https://github.com/sd22404/portfolio",
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "CI/CD"],
   },
@@ -76,7 +95,7 @@ export const projects: Project[] = [
     title: "Valorant Tracker",
     description: "A WIP desktop app to provide easy access to in-game information like current store, current match, and match history.",
     source: "https://github.com/lm22433/valorant-store-tracker",
-    tags: ["Tauri", "Rust", "React", "TypeScript", "REST APIs"],
+    tags: ["Tauri", "Rust", "React", "TypeScript", "External API"],
   }
 ];
 
