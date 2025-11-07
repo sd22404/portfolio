@@ -20,7 +20,7 @@ export const projects: Project[] = [
         { type: 'video', src: "/portfolio/projects/shifting-sands/trailer.mp4", alt: "Trailer" },
         { type: 'video', src: "/portfolio/projects/shifting-sands/gameplay.mp4", alt: "Gameplay" },
         { type: 'video', src: "/portfolio/projects/shifting-sands/technical.mp4", alt: "Technical Video" },
-        { type: 'pdf', src: "/portfolio/projects/shifting-sands/report.pdf", alt: "Report" }
+        { type: 'preview', src: "/portfolio/projects/shifting-sands/report-preview.png", full: "/portfolio/projects/shifting-sands/report.pdf", alt: "Report" }
     ],
     source: "https://github.com/lm22433/2024-SealTeam7",
     coverImage: "hero-background.png",
@@ -73,7 +73,7 @@ export const projects: Project[] = [
       `Introduced a halo-exchange technique via RPCs to optimise Game of Life world division among workers.`,
     ],
     media: [
-      { type: 'pdf', src: "/portfolio/projects/game-of-life/report.pdf", alt: "Report" }
+      { type: 'preview', src: "/portfolio/projects/game-of-life/report-preview.png", full: "/portfolio/projects/game-of-life/report.pdf", alt: "Report" }
     ],
     coverImage: "report-cover.png",
     tags: ["Go", "SDL2", "AWS"],

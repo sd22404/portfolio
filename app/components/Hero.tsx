@@ -5,8 +5,8 @@ import TerminalBlock from './ui/TerminalBlock';
 
 export default function Hero({bg}: {bg?: string}) {
   return (
-    <Section id="hero" bgClass={bg} className="py-20 md:py-32">
-      <div className="space-y-12">
+    <Section id="hero" bgClass={bg}>
+      <div className="space-y-12 py-20 md:py-32">
         <div>
           <TerminalBlock variant="prompt">whoami</TerminalBlock>
           <h1 className="my-4 text-5xl md:text-7xl font-bold font-mono drop-shadow-xl">

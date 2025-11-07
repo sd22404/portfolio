@@ -9,8 +9,9 @@ import Image from 'next/image';
 import { Github, ExternalLink, ChevronsRight } from '../ui/Icons';
 
 export type MediaItem = {
-    type: 'image' | 'video' | 'pdf';
+    type: 'image' | 'video' | 'preview';
     src: string;
+    full?: string;
     alt?: string;
 }
 
