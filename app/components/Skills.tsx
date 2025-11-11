@@ -18,13 +18,14 @@ export default function Skills({bg}: {bg?: string}) {
             <Subtitle variant="medium">Languages</Subtitle>
           </div>
           <TagContainer>
-            <Tag>TypeScript</Tag>
-            <Tag>Python</Tag>
-            <Tag>Go</Tag>
-            <Tag>Rust</Tag>
-            <Tag>Java</Tag>
             <Tag>C++</Tag>
             <Tag>C#</Tag>
+            <Tag>Python</Tag>
+            <Tag>Java</Tag>
+            <Tag>TypeScript</Tag>
+            <Tag>HTML</Tag>
+            <Tag>CSS</Tag>
+            <Tag>Go</Tag>
             <Tag>Rust</Tag>
           </TagContainer>
         </Card>
