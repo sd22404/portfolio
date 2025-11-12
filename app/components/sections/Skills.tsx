@@ -1,11 +1,11 @@
-import SectionHeading from './ui/SectionHeading';
-import Section from './ui/Section';
-import Card from './ui/Card';
-import Text from './ui/Text';
-import Tag from './ui/Tag';
-import Subtitle from './ui/Subtitle';
-import TagContainer from './ui/TagContainer';
-import { Code, Cog, Cpu, Zap } from './ui/Icons';
+import SectionHeading from '../ui/SectionHeading';
+import Section from '../ui/Section';
+import Card from '../ui/Card';
+import Text from '../ui/Text';
+import Tag from '../ui/Tag';
+import Subtitle from '../ui/Subtitle';
+import TagContainer from '../ui/TagContainer';
+import { Code, Cog, Cpu, Zap } from '../ui/Icons';
 
 export default function Skills({bg}: {bg?: string}) {
   return (

@@ -1,9 +1,9 @@
-import SectionHeading from './ui/SectionHeading';
-import Section from './ui/Section';
-import Card from './ui/Card';
-import Text from './ui/Text';
-import BulletList from './ui/BulletList';
-import Subtitle from './ui/Subtitle';
+import SectionHeading from '../ui/SectionHeading';
+import Section from '../ui/Section';
+import Card from '../ui/Card';
+import Text from '../ui/Text';
+import BulletList from '../ui/BulletList';
+import Subtitle from '../ui/Subtitle';
 
 export default function Experience({bg}: {bg?: string}) {
   return (

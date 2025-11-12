@@ -7,26 +7,7 @@ import Link from '../ui/Link';
 import Text from '../ui/Text';
 import Image from 'next/image';
 import { Github, ExternalLink, ChevronsRight } from '../ui/Icons';
-
-export type MediaItem = {
-    type: 'image' | 'video' | 'preview';
-    src: string;
-    full?: string;
-    alt?: string;
-}
-
-export type Project = {
-    slug: string;
-    ticker?: string;
-    title: string;
-    description: string;
-    content?: string[];
-    media?: MediaItem[];
-    coverImage?: string;
-    source?: string;
-    demo?: string;
-    tags?: string[];
-};
+import { Project } from '../../data/projects';
 
 export default function ProjectCard(project: Project) {
     return (
@@ -48,6 +29,7 @@ export default function ProjectCard(project: Project) {
                                 <Image
                                     src={`/portfolio/projects/${project.slug}/${project.coverImage}`}
                                     alt={`${project.title} Cover Image`}
+                                    loading="lazy"
                                     fill
                                     className="object-cover transition-transform duration-300 group-hover/img:scale-105"
                                 />

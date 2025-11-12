@@ -1,6 +1,22 @@
-import SectionHeading from './ui/SectionHeading';
-import Section from './ui/Section';
-import ProjectCard, { Project } from './sub/ProjectCard';
+export type MediaItem = {
+    type: 'image' | 'video' | 'preview';
+    src: string;
+    full?: string;
+    alt?: string;
+}
+
+export type Project = {
+    slug: string;
+    ticker?: string;
+    title: string;
+    description: string;
+    content?: string[];
+    media?: MediaItem[];
+    coverImage?: string;
+    source?: string;
+    demo?: string;
+    tags?: string[];
+};
 
 export const projects: Project[] = [
   {
@@ -103,16 +119,3 @@ export const projects: Project[] = [
     tags: ["Tauri", "Rust", "React", "TypeScript", "External API"],
   }
 ];
-
-export default function Projects({bg}: {bg?: string}) {
-  return (
-    <Section id="projects" bgClass={bg}>
-      <SectionHeading number="03">Featured Projects</SectionHeading>
-      <div className="grid lg:grid-cols-2 3xl:grid-cols-3 gap-6">
-        {projects.map((project) => (
-          <ProjectCard key={project.slug} {...project} />
-        ))}
-      </div>
-    </Section>
-  );
-}

@@ -1,17 +1,17 @@
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Education from './components/Education';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Awards from './components/Awards';
-import Footer from './components/Footer';
+import Header from './components/sections/Header';
+import Hero from './components/sections/Hero';
+import Education from './components/sections/Education';
+import Experience from './components/sections/Experience';
+import Projects from './components/sections/Projects';
+import Skills from './components/sections/Skills';
+import Awards from './components/sections/Awards';
+import Footer from './components/sections/Footer';
 import Background from './components/sub/GoLBackground';
 import Section from './components/ui/Section';
 
 export default function Home() {
   return (
-      <div className="relative min-h-screen">
+      <main className="relative min-h-screen">
         <Background />
         <Header links={[
           { href: "#hero", label: "about", variant: "text" },
@@ -27,6 +27,6 @@ export default function Home() {
         <Awards bg="bg-background-lighter border-b border-border/40" />
         <Section id="blank" bgClass='bg-background pb-20 sm:pb-24'> </Section>
         <Footer />
-      </div>
+      </main>
   );
 }

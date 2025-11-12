@@ -1,10 +1,10 @@
-import SectionHeading from './ui/SectionHeading';
-import Section from './ui/Section';
-import Card from './ui/Card';
-import Tag from './ui/Tag';
-import Text from './ui/Text';
-import Subtitle from './ui/Subtitle';
-import TagContainer from './ui/TagContainer';
+import SectionHeading from '../ui/SectionHeading';
+import Section from '../ui/Section';
+import Card from '../ui/Card';
+import Tag from '../ui/Tag';
+import Text from '../ui/Text';
+import Subtitle from '../ui/Subtitle';
+import TagContainer from '../ui/TagContainer';
 
 export default function Education({bg}: {bg?: string}) {
   return (

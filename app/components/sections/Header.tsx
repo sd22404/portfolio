@@ -1,5 +1,5 @@
-import Link from './ui/Link';
-import Text from './ui/Text';
+import Link from '../ui/Link';
+import Text from '../ui/Text';
 
 export type LinkItem = {
     href: string;

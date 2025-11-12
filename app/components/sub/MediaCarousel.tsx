@@ -2,8 +2,8 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import ReactDOM from "react-dom";
-import type { MediaItem } from "./ProjectCard";
 import Button from "../ui/Button";
+import { MediaItem } from "../../data/projects";
 
 export default function MediaCarousel({ items = [] as MediaItem[], className = "" }: { items?: MediaItem[], className?: string }) {
   const slides = useMemo(() => items.filter(Boolean), [items]);
@@ -42,7 +42,8 @@ export default function MediaCarousel({ items = [] as MediaItem[], className = "
         className="relative w-full h-full mx-auto overflow-hidden"
         role="region"
         aria-roledescription="carousel"
-        aria-label="Project media carousel"
+        aria-label={`Slide ${index + 1} of ${slides.length}: ${slides[index].alt || slides[index].type}`}
+        aria-live="polite"
       >
       {/* Slides */}
       <div

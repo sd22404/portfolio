@@ -1,7 +1,7 @@
-import SectionHeading from './ui/SectionHeading';
-import Section from './ui/Section';
-import Award from './sub/Award';
-import { Gamepad, User, Award as AwardIcon, Star, Medal, Bookmark } from './ui/Icons';
+import SectionHeading from '../ui/SectionHeading';
+import Section from '../ui/Section';
+import Award from '../sub/Award';
+import { Gamepad, User, Award as AwardIcon, Star, Medal, Bookmark } from '../ui/Icons';
 
 export default function Awards({bg}: {bg?: string}) {
     return (

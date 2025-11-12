@@ -6,10 +6,10 @@ import TagContainer from "@/app/components/ui/TagContainer";
 import Link from "@/app/components/ui/Link";
 import { notFound } from "next/navigation";
 import Background from "@/app/components/sub/GoLBackground";
-import { projects } from "@/app/components/Projects";
-import Header from "@/app/components/Header";
+import { projects } from "@/app/data/projects";
+import Header from "@/app/components/sections/Header";
 import MediaCarousel from "@/app/components/sub/MediaCarousel";
-import Footer from "@/app/components/Footer";
+import Footer from "@/app/components/sections/Footer";
 import BulletList from "@/app/components/ui/BulletList";
 import { ExternalLink, Github } from "@/app/components/ui/Icons";
 
