@@ -1,4 +1,4 @@
-import Links from '../sub/Links';
+import Links from '../elements/Links';
 import Button from '../ui/Button';
 import Section from '../ui/Section';
 import TerminalBlock from '../ui/TerminalBlock';

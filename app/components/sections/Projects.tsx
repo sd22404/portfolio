@@ -1,6 +1,6 @@
 import SectionHeading from '../ui/SectionHeading';
 import Section from '../ui/Section';
-import ProjectCard from '../sub/ProjectCard';
+import ProjectCard from '../elements/ProjectCard';
 import { projects } from '../../data/projects';
 
 export default function Projects({bg}: {bg?: string}) {

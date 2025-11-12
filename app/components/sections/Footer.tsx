@@ -1,5 +1,5 @@
 import TerminalBlock from '../ui/TerminalBlock';
-import Links from '../sub/Links';
+import Links from '../elements/Links';
 
 export default function Footer() {
   return (

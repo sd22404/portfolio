@@ -3,6 +3,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import ReactDOM from "react-dom";
 import Button from "../ui/Button";
+import Image from "next/image";
 import { MediaItem } from "../../data/projects";
 
 export default function MediaCarousel({ items = [] as MediaItem[], className = "" }: { items?: MediaItem[], className?: string }) {
@@ -24,7 +25,7 @@ export default function MediaCarousel({ items = [] as MediaItem[], className = "
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  });
+  }, []);
 
   const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length);
   const next = () => setIndex((i) => (i + 1) % slides.length);
@@ -42,16 +43,16 @@ export default function MediaCarousel({ items = [] as MediaItem[], className = "
         className="relative w-full h-full mx-auto overflow-hidden"
         role="region"
         aria-roledescription="carousel"
-        aria-label={`Slide ${index + 1} of ${slides.length}: ${slides[index].alt || slides[index].type}`}
-        aria-live="polite"
+        aria-label={`Carousel. Slide ${index + 1} of ${slides.length}: ${slides[index].alt || slides[index].type}`}
       >
+      <div className="sr-only" aria-live="polite">Slide {index + 1} of {slides.length}</div>
       {/* Slides */}
       <div
         className="flex h-full items-center transition-transform duration-500 ease-out"
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
         {slides.map((item, i) => (
-          <div key={i} className="shrink-0 grow-0 basis-full h-full flex items-center justify-center">
+          <div key={i} className="relative shrink-0 grow-0 basis-full h-full flex items-center justify-center">
             <Slide item={item} onImageClick={() => setModalOpen(true)} />
           </div>
         ))}
@@ -101,14 +102,15 @@ function Slide({ item, zoomed, onImageClick }: { item: MediaItem, zoomed?: boole
   switch (item.type) {
     case "image":
       return (
-        <img
-          src={item.src}
-          alt={item.alt ?? "Image"}
-          loading="lazy"
-          decoding="async"
-          className={`block max-h-full max-w-full object-contain rounded-md ${zoomed ? "hover:cursor-zoom-out" : "hover:cursor-zoom-in"}`}
-          onClick={() => onImageClick()}
-        />
+        <div className="relative w-full h-full min-h-[40vh]">
+          <Image
+            src={item.src}
+            alt={item.alt ?? "Project image"}
+            fill
+            className={`object-contain rounded-md ${zoomed ? "hover:cursor-zoom-out" : "hover:cursor-zoom-in"}`}
+            onClick={() => onImageClick()}
+          />
+        </div>
       );
     case "video":
       return (
@@ -124,20 +126,19 @@ function Slide({ item, zoomed, onImageClick }: { item: MediaItem, zoomed?: boole
       );
     case "preview":
       return (
-        <div className="relative max-w-full max-h-full">
-          <img
+        <div className="relative w-full h-full min-h-[60vh]">
+          <Image
             src={item.src}
-            alt={item.alt ?? "Preview Image"}
-            loading="lazy"
-            decoding="async"
-            className="block max-h-full max-w-full object-contain rounded-md"
+            alt={item.alt ?? "Preview image"}
+            fill
+            className="object-cover object-top rounded-md"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 h-full w-full bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none" />
           <Button
             href={item.full}
             external
             variant="ghost"
-            className="absolute bottom-30 left-1/2 -translate-x-1/2 z-10 text-2xl!"
+            className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
             aria-label="Open full preview"
           >
             View

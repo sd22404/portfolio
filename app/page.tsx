@@ -6,12 +6,12 @@ import Projects from './components/sections/Projects';
 import Skills from './components/sections/Skills';
 import Awards from './components/sections/Awards';
 import Footer from './components/sections/Footer';
-import Background from './components/sub/GoLBackground';
+import Background from './components/elements/GoLBackground';
 import Section from './components/ui/Section';
 
 export default function Home() {
   return (
-      <main className="relative min-h-screen">
+      <div className="relative min-h-screen">
         <Background />
         <Header links={[
           { href: "#hero", label: "about", variant: "text" },
@@ -27,6 +27,6 @@ export default function Home() {
         <Awards bg="bg-background-lighter border-b border-border/40" />
         <Section id="blank" bgClass='bg-background pb-20 sm:pb-24'> </Section>
         <Footer />
-      </main>
+      </div>
   );
 }

@@ -23,8 +23,8 @@ export default function TerminalBlock({
   const prefix = {
     prompt: <span className="select-none">$ </span>,
     output: (
-      <span className="text-muted select-none inline-flex w-[2ch] align-middle">
-        <ChevronRight />
+      <span className="text-muted select-none object-top inline-flex align-bottom">
+        <ChevronRight className="h-lh" />
       </span>
     ),
     code: null

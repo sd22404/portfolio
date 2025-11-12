@@ -15,12 +15,14 @@ export default function Text({ children, variant = 'body', className = '' }: Tex
     muted: "text-muted font-mono text-sm",
     highlight: "font-mono text-accent",
     medium: "font-mono text-foreground",
-    ornament: "aria-hidden text-accent-tertiary font-mono text-sm select-none",
-    'ornament-alt': "aria-hidden text-accent-quaternary font-mono text-sm select-none",
+    ornament: "text-accent-tertiary font-mono text-sm select-none",
+    'ornament-alt': "text-accent-quaternary font-mono text-sm select-none",
   };
 
+  const isDecorative = variant === 'ornament' || variant === 'ornament-alt';
+
   return (
-    <p className={`${variantClasses[variant]} ${className}`}>
+    <p className={`${variantClasses[variant]} ${className}`} aria-hidden={isDecorative || undefined}>
       {children}
     </p>
   );

@@ -12,7 +12,7 @@ export default function BulletList({ items, className = '' }: BulletListProps) {
   <ul className={`space-y-1 ${className}`}>
       {items.map((item, index) => (
         <li key={index} className="flex gap-2">
-          <Text variant="ornament-alt" className="flex items-center"><ChevronRight /></Text>
+          <Text variant="ornament-alt" className="object-top"><ChevronRight className="h-lh" /></Text>
           <Text variant="small">{item}</Text>
         </li>
       ))}
